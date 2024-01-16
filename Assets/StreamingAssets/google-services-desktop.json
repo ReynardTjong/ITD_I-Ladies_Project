@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "331050173122",
+    "firebase_url": "https://dda-project-test-1-be14e-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dda-project-test-1-be14e",
+    "storage_bucket": "dda-project-test-1-be14e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331050173122:android:fd7c1355ab9f3050dc715b",
+        "android_client_info": {
+          "package_name": "com.google.firebase.reynard.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO1LjQ14an_XHN69zTpqezM5L_NxeaBU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
