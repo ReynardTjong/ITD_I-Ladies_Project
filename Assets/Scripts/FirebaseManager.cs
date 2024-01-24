@@ -66,6 +66,16 @@ public class FirebaseManager : MonoBehaviour
         StartCoroutine(SignUp(emailSignUpField.text, passwordSignUpField.text, usernameSignUpField.text));
     }
 
+    public void ResetInputFields()
+    {
+        emailLoginField.text = "";
+        passwordLoginField.text = "";
+        usernameSignUpField.text = "";
+        emailSignUpField.text = "";
+        passwordSignUpField.text = "";
+        passwordSignUpConfirmField.text = "";
+    }
+
     private IEnumerator Login(string email, string password)
     {
         //Call the Firebase auth signin function passing the email and password
@@ -100,6 +110,8 @@ public class FirebaseManager : MonoBehaviour
                     break;
             }
             warningLoginText.text = message;
+
+            ResetInputFields();
         }
         else
         {
@@ -187,6 +199,8 @@ public class FirebaseManager : MonoBehaviour
                         UiManager.instance.LoginScreen();
                         warningSignUpText.text = "";
                     }
+
+                    ResetInputFields();
                 }
             }
         }

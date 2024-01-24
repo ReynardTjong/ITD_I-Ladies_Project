@@ -6,6 +6,9 @@ public class UiManager : MonoBehaviour
 {
     public static UiManager instance;
 
+    [Header("Firebase Script Reference")]
+    public FirebaseManager firebaseManager;
+
     [Header("Login/SignUp")]
     public GameObject loginPage;
     public GameObject signUpPage;
@@ -22,17 +25,21 @@ public class UiManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
+
+        firebaseManager = GetComponent<FirebaseManager>();
     }
 
     public void LoginScreen()
     {
         loginPage.SetActive(true);
         signUpPage.SetActive(false);
+        firebaseManager.ResetInputFields();
     }
 
     public void SignUpScreen()
     {
         signUpPage.SetActive(true);
         loginPage.SetActive(false);
+        firebaseManager.ResetInputFields();
     }
 }
