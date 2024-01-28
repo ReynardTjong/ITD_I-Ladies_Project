@@ -20,7 +20,7 @@ public class UiManager : MonoBehaviour
     public GameObject playContents;
     public GameObject returnToPlayContents;
 
-    [Header("Play")]
+    [Header("Play Buttons")]
     public GameObject campaignBtn;
     public GameObject freeRoamBtn;
     public GameObject tutorialBtn;
@@ -43,6 +43,30 @@ public class UiManager : MonoBehaviour
     public GameObject tutorialContents;
     public GameObject tutorialReturnBtn;
 
+    [Header("Achievements Menu")]
+    public GameObject achievementsContents;
+
+    [Header("Book Menu")]
+    public GameObject bookContents;
+
+    [Header("Book Buttons")]
+    public GameObject gardeningBtn;
+    public GameObject cookingBtn;
+
+    [Header("Book (Gardening)")]
+    public GameObject gardeningContents;
+    public GameObject gardeningSkill1;
+    public GameObject gardeningSkill2;
+    public GameObject gardeningSkill3;
+    public GameObject gardeningSkill4;
+
+    [Header("Book (Cooking)")]
+    public GameObject cookingContents;
+    public GameObject cookingRecipe1;
+    public GameObject cookingRecipe2;
+    public GameObject cookingRecipe3;
+    public GameObject cookingRecipe4;
+
     private void Awake()
     {
         // Singleton pattern to ensure only one instance exists
@@ -59,6 +83,7 @@ public class UiManager : MonoBehaviour
         firebaseManager = GetComponent<FirebaseManager>();
     }
 
+    #region Login/Sign Up Functions
     public void LoginScreen()
     {
         loginPage.SetActive(true);
@@ -72,10 +97,15 @@ public class UiManager : MonoBehaviour
         loginPage.SetActive(false);
         firebaseManager.ResetInputFields();
     }
+    #endregion
 
+
+    #region Play Menu Functions
     public void PlayContentsScreen()
     {
         playContents.SetActive(true);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(false);
     }
 
     public void BackToPlayContentsScreen()
@@ -155,4 +185,117 @@ public class UiManager : MonoBehaviour
         tutorialContents.SetActive(true);
         tutorialReturnBtn.SetActive(true);
     }
+    #endregion
+
+    #region Achievements Menu Functions
+    public void AchievementsScreen()
+    {
+        playContents.SetActive(false);
+        achievementsContents.SetActive(true);
+        bookContents.SetActive(false);
+    }
+    #endregion
+
+    #region Book Menu Functions
+
+    public void BookScreen()
+    {
+        playContents.SetActive(false);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(true);
+    }
+
+    public void BackToBookScreen()
+    {
+        gardeningBtn.SetActive(true);
+        cookingBtn.SetActive(true);
+
+        gardeningContents.SetActive(false);
+        cookingContents.SetActive(false);
+    }
+
+    public void GardeningBookScreen()
+    {
+        gardeningBtn.SetActive(false);
+        cookingBtn.SetActive(false);
+
+        gardeningContents.SetActive(true);
+
+        GardeningSkillOneScreen();
+    }
+
+    public void GardeningSkillOneScreen()
+    {
+        gardeningSkill1.SetActive(true);
+        gardeningSkill2.SetActive(false);
+        gardeningSkill3.SetActive(false);
+        gardeningSkill4.SetActive(false);
+    }
+
+    public void GardeningSkillTwoScreen()
+    {
+        gardeningSkill1.SetActive(false);
+        gardeningSkill2.SetActive(true);
+        gardeningSkill3.SetActive(false);
+        gardeningSkill4.SetActive(false);
+    }
+
+    public void GardeningSkillThreeScreen()
+    {
+        gardeningSkill1.SetActive(false);
+        gardeningSkill2.SetActive(false);
+        gardeningSkill3.SetActive(true);
+        gardeningSkill4.SetActive(false);
+    }
+
+    public void GardeningSkillFourScreen()
+    {
+        gardeningSkill1.SetActive(false);
+        gardeningSkill2.SetActive(false);
+        gardeningSkill3.SetActive(false);
+        gardeningSkill4.SetActive(true);
+    }
+
+    public void CookingBookScreen()
+    {
+        gardeningBtn.SetActive(false);
+        cookingBtn.SetActive(false);
+
+        cookingContents.SetActive(true);
+
+        CookingRecipeOneScreen();
+    }
+
+    public void CookingRecipeOneScreen()
+    {
+        cookingRecipe1.SetActive(true);
+        cookingRecipe2.SetActive(false);
+        cookingRecipe3.SetActive(false);
+        cookingRecipe4.SetActive(false);
+    }
+
+    public void CookingRecipeTwoScreen()
+    {
+        cookingRecipe1.SetActive(false);
+        cookingRecipe2.SetActive(true);
+        cookingRecipe3.SetActive(false);
+        cookingRecipe4.SetActive(false);
+    }
+
+    public void CookingRecipeThreeScreen()
+    {
+        cookingRecipe1.SetActive(false);
+        cookingRecipe2.SetActive(false);
+        cookingRecipe3.SetActive(true);
+        cookingRecipe4.SetActive(false);
+    }
+
+    public void CookingRecipeFourScreen()
+    {
+        cookingRecipe1.SetActive(false);
+        cookingRecipe2.SetActive(false);
+        cookingRecipe3.SetActive(false);
+        cookingRecipe4.SetActive(true);
+    }
+    #endregion
 }

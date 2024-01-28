@@ -583,7 +583,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 38522550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: GardeningBookScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &38522550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,7 +2705,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 167736413}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: GardeningSkillThreeScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &167736413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3676,7 +3700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -3835,7 +3859,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 225439320}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: GardeningSkillFourScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &225439320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4813,7 +4849,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 315122965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CookingRecipeFourScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &315122965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5861,7 +5909,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -6192,7 +6240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -7270,7 +7318,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 459142690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: BookScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &459142690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8056,7 +8116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -8426,7 +8486,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 549068263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: AchievementsScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &549068263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9950,7 +10022,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 618367434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: BackToBookScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &618367434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10783,7 +10867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -10942,7 +11026,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 671299560}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: GardeningSkillOneScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &671299560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15427,7 +15523,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 988810082}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CookingRecipeThreeScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &988810082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17612,7 +17720,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -17925,7 +18033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -20683,7 +20791,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1320495959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CookingRecipeTwoScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1320495959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23446,6 +23566,20 @@ MonoBehaviour:
   freeRoamReturnBtn: {fileID: 138921355}
   tutorialContents: {fileID: 681088657}
   tutorialReturnBtn: {fileID: 1620156045}
+  achievementsContents: {fileID: 1935094082}
+  bookContents: {fileID: 721398270}
+  gardeningBtn: {fileID: 38522547}
+  cookingBtn: {fileID: 1536086246}
+  gardeningContents: {fileID: 507451302}
+  gardeningSkill1: {fileID: 1819565379}
+  gardeningSkill2: {fileID: 1284867925}
+  gardeningSkill3: {fileID: 368731612}
+  gardeningSkill4: {fileID: 812203271}
+  cookingContents: {fileID: 1356431381}
+  cookingRecipe1: {fileID: 105826723}
+  cookingRecipe2: {fileID: 1740664615}
+  cookingRecipe3: {fileID: 1080328163}
+  cookingRecipe4: {fileID: 935736032}
 --- !u!4 &1527065710
 Transform:
   m_ObjectHideFlags: 0
@@ -23543,7 +23677,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1536086249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CookingBookScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1536086249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23987,7 +24133,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1549170672}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: GardeningSkillThreeScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1549170672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25584,7 +25742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1661250891}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CookingRecipeThreeScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1661250891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27082,7 +27252,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1714982984}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: BackToBookScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1714982984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27552,7 +27734,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1750947608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: GardeningSkillTwoScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1750947608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29090,7 +29284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1879838124}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CookingRecipeTwoScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1879838124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30170,7 +30376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935094083}
   m_Layer: 5
-  m_Name: Achievement_Contents
+  m_Name: Achievements_Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32484,7 +32690,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2081070353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: GardeningSkillTwoScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2081070353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32617,7 +32835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample
+  m_text: Sample2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -32897,7 +33115,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2111879084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527065709}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CookingRecipeOneScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2111879084
 MonoBehaviour:
   m_ObjectHideFlags: 0
