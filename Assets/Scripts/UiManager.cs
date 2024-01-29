@@ -26,14 +26,14 @@ public class UiManager : MonoBehaviour
     public GameObject tutorialBtn;
 
     [Header("Play (Campaign)")]
-    public GameObject missionContents;
-    public GameObject missionBtns;
-    public GameObject mission1Contents;
-    public GameObject mission2Contents;
-    public GameObject mission3Contents;
-    public GameObject mission1ReturnBtn;
-    public GameObject mission2ReturnBtn;
-    public GameObject mission3ReturnBtn;
+    public GameObject chapterContents;
+    public GameObject chapterBtns;
+    public GameObject chapter1Contents;
+    public GameObject chapter2Contents;
+    public GameObject chapter3Contents;
+    public GameObject chapter1ReturnBtn;
+    public GameObject chapter2ReturnBtn;
+    public GameObject chapter3ReturnBtn;
 
     [Header("Play (FreeRoam)")]
     public GameObject freeRoamContents;
@@ -74,12 +74,27 @@ public class UiManager : MonoBehaviour
     public GameObject howToPlayContents;
 
     [Header("How To Play Buttons")]
-    public GameObject instrctionsBtn;
+    public GameObject instructionsBtn;
     public GameObject vrControllerBindingsBtn;
     public GameObject creditsBtn;
 
-    [Header("How To Play (Instructions")]
+    [Header("How To Play (Instructions)")]
     public GameObject instructionsContents;
+    public GameObject instructionsBtns;
+    public GameObject campaignInstructionsContents;
+    public GameObject freeRoamInstructionsContents;
+
+    [Header("How To Play (VR Controller Bindings)")]
+    public GameObject vrControllerBindingsContents;
+
+    [Header("How To Play (Credits)")]
+    public GameObject creditsContents;
+
+    [Header("Status Menu")]
+    public GameObject statusContents;
+
+    [Header("Logout")]
+    public GameObject logoutContents;
 
     private void Awake()
     {
@@ -97,7 +112,7 @@ public class UiManager : MonoBehaviour
         firebaseManager = GetComponent<FirebaseManager>();
     }
 
-    #region Login/Sign Up Functions
+    #region Login/Sign Up Page Functions
     public void LoginScreen()
     {
         loginPage.SetActive(true);
@@ -121,6 +136,8 @@ public class UiManager : MonoBehaviour
         achievementsContents.SetActive(false);
         bookContents.SetActive(false);
         volumeContents.SetActive(false);
+        howToPlayContents.SetActive(false);
+        statusContents.SetActive(false);
     }
 
     public void BackToPlayContentsScreen()
@@ -129,56 +146,56 @@ public class UiManager : MonoBehaviour
         freeRoamBtn.SetActive(true);
         tutorialBtn.SetActive(true);
 
-        missionContents.SetActive(false);
+        chapterContents.SetActive(false);
         freeRoamContents.SetActive(false);
         tutorialContents.SetActive(false);
     }
 
-    public void CampaignMissionsScreen()
+    public void CampaignChaptersScreen()
     {
         campaignBtn.SetActive(false);
         freeRoamBtn.SetActive(false);
         tutorialBtn.SetActive(false);
 
-        missionContents.SetActive(true);
+        chapterContents.SetActive(true);
     }
 
     public void BackToCampaignMissionsScreen()
     {
-        missionBtns.SetActive(true);
+        chapterBtns.SetActive(true);
         returnToPlayContents.SetActive(true);
 
-        mission1Contents.SetActive(false);
-        mission2Contents.SetActive(false);
-        mission3Contents.SetActive(false);
+        chapter1Contents.SetActive(false);
+        chapter2Contents.SetActive(false);
+        chapter3Contents.SetActive(false);
 
-        mission1ReturnBtn.SetActive(false);
-        mission2ReturnBtn.SetActive(false);
-        mission3ReturnBtn.SetActive(false);
+        chapter1ReturnBtn.SetActive(false);
+        chapter2ReturnBtn.SetActive(false);
+        chapter3ReturnBtn.SetActive(false);
     }
 
-    public void Mission1Screen()
+    public void Chapter1Screen()
     {
-        missionBtns.SetActive(false);
+        chapterBtns.SetActive(false);
         returnToPlayContents.SetActive(false);
-        mission1Contents.SetActive(true);
-        mission1ReturnBtn.SetActive(true);
+        chapter1Contents.SetActive(true);
+        chapter1ReturnBtn.SetActive(true);
     }
 
-    public void Mission2Screen()
+    public void Chapter2Screen()
     {
-        missionBtns.SetActive(false);
+        chapterBtns.SetActive(false);
         returnToPlayContents.SetActive(false);
-        mission2Contents.SetActive(true);
-        mission2ReturnBtn.SetActive(true);
+        chapter2Contents.SetActive(true);
+        chapter2ReturnBtn.SetActive(true);
     }
 
-    public void Mission3Screen()
+    public void Chapter3Screen()
     {
-        missionBtns.SetActive(false);
+        chapterBtns.SetActive(false);
         returnToPlayContents.SetActive(false);
-        mission3Contents.SetActive(true);
-        mission3ReturnBtn.SetActive(true);
+        chapter3Contents.SetActive(true);
+        chapter3ReturnBtn.SetActive(true);
     }
 
     public void FreeRoamScreen()
@@ -209,6 +226,8 @@ public class UiManager : MonoBehaviour
         achievementsContents.SetActive(true);
         bookContents.SetActive(false);
         volumeContents.SetActive(false);
+        howToPlayContents.SetActive(false);
+        statusContents.SetActive(false);
     }
     #endregion
 
@@ -220,6 +239,8 @@ public class UiManager : MonoBehaviour
         achievementsContents.SetActive(false);
         bookContents.SetActive(true);
         volumeContents.SetActive(false);
+        howToPlayContents.SetActive(false);
+        statusContents.SetActive(false);
     }
 
     public void BackToBookScreen()
@@ -323,6 +344,110 @@ public class UiManager : MonoBehaviour
         achievementsContents.SetActive(false);
         bookContents.SetActive(false);
         volumeContents.SetActive(true);
+        howToPlayContents.SetActive(false);
+        statusContents.SetActive(false);
+    }
+    #endregion
+
+    #region How To Play Menu Functions
+    public void HowToPlayScreen()
+    {
+        playContents.SetActive(false);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(false);
+        volumeContents.SetActive(false);
+        howToPlayContents.SetActive(true);
+        statusContents.SetActive(false);
+    }
+
+    public void BackToHowToPlayScreen()
+    {
+        instructionsBtn.SetActive(true);
+        vrControllerBindingsBtn.SetActive(true);
+        creditsBtn.SetActive(true);
+
+        instructionsContents.SetActive(false);
+        vrControllerBindingsContents.SetActive(false);
+        creditsContents.SetActive(false);
+    }
+
+    public void InstructionsScreen()
+    {
+        instructionsBtn.SetActive(false);
+        vrControllerBindingsBtn.SetActive(false);
+        creditsBtn.SetActive(false);
+
+        instructionsContents.SetActive(true);
+    }
+
+    public void BackToInstructionsScreen()
+    {
+        instructionsBtns.SetActive(true);
+
+        campaignInstructionsContents.SetActive(false);
+        freeRoamInstructionsContents.SetActive(false);
+    }
+
+    public void CampaignInstructionsScreen()
+    {
+        instructionsBtns.SetActive(false);
+
+        campaignInstructionsContents.SetActive(true);
+    }
+
+    public void FreeRoamInstructionsScreen()
+    {
+        instructionsBtns.SetActive(false);
+
+        freeRoamInstructionsContents.SetActive(true);
+    }
+
+    public void VRControllerBindingsScreen()
+    {
+        instructionsBtn.SetActive(false);
+        vrControllerBindingsBtn.SetActive(false);
+        creditsBtn.SetActive(false);
+
+        vrControllerBindingsContents.SetActive(true);
+    }
+
+    public void CreditsScreen()
+    {
+        instructionsBtn.SetActive(false);
+        vrControllerBindingsBtn.SetActive(false);
+        creditsBtn.SetActive(false);
+
+        creditsContents.SetActive(true);
+    }
+    #endregion
+
+    #region Status Menu Functions
+    public void StatusScreen()
+    {
+        playContents.SetActive(false);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(false);
+        volumeContents.SetActive(false);
+        howToPlayContents.SetActive(false);
+        statusContents.SetActive(true);
+    }
+    #endregion
+
+    #region Logout Menu Functions
+    public void LogoutScreen()
+    {
+        playContents.SetActive(false);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(false);
+        volumeContents.SetActive(false);
+        howToPlayContents.SetActive(false);
+        statusContents.SetActive(false);
+        logoutContents.SetActive(true);
+    }
+
+    public void DisableLogoutScreen()
+    {
+        logoutContents.SetActive(false);
     }
     #endregion
 }
