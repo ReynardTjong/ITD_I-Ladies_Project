@@ -7042,7 +7042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &414493980
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24108,10 +24108,6 @@ MonoBehaviour:
   passwordSignUpField: {fileID: 1100387445}
   passwordSignUpConfirmField: {fileID: 987353780}
   warningSignUpText: {fileID: 1376876098}
-  username: 
-  chaptersCompleted: 0
-  achievementsUnlocked: 0
-  booksUnlocked: 0
 --- !u!4 &1539586358
 Transform:
   m_ObjectHideFlags: 0
@@ -31107,7 +31103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1938825275
 RectTransform:
   m_ObjectHideFlags: 0
