@@ -1,7 +1,9 @@
+﻿using System;
 using System.Collections;
 using UnityEngine;
 using Firebase;
 using Firebase.Database;
+using Firebase.Extensions;
 using Firebase.Auth;
 using TMPro;
 using System.Threading.Tasks;
@@ -15,6 +17,7 @@ public class FirebaseManager : MonoBehaviour
     public FirebaseAuth auth;
     public FirebaseUser User;
     public DatabaseReference DBreference;
+    public DatabaseReference playerReference;
 
     //Login variables
     [Header("Login")]
@@ -30,13 +33,6 @@ public class FirebaseManager : MonoBehaviour
     public TMP_InputField passwordSignUpField;
     public TMP_InputField passwordSignUpConfirmField;
     public TMP_Text warningSignUpText;
-
-    [Header("Status Statistics")]
-    public string username;
-    public int chaptersCompleted;
-    public int achievementsUnlocked;
-    public int booksUnlocked;
-    public Dictionary<string, string> gardenAreas;
 
     void Awake()
     {
@@ -62,6 +58,7 @@ public class FirebaseManager : MonoBehaviour
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
         DBreference = FirebaseDatabase.DefaultInstance.RootReference;
+        playerReference = FirebaseDatabase.DefaultInstance.GetReference("Players");
     }
 
     //Function for the login button
@@ -77,10 +74,16 @@ public class FirebaseManager : MonoBehaviour
         StartCoroutine(SignUp(emailSignUpField.text, passwordSignUpField.text, usernameSignUpField.text));
     }
 
+    private void StartCoroutine(Task<IEnumerator> task)
+    {
+        throw new NotImplementedException();
+    }
+
     public void LogoutButton()
     {
         auth.SignOut();
         UiManager.instance.LoginScreen();
+        ResetInputFields();
     }
 
     public void ResetInputFields()
@@ -91,6 +94,15 @@ public class FirebaseManager : MonoBehaviour
         emailSignUpField.text = "";
         passwordSignUpField.text = "";
         passwordSignUpConfirmField.text = "";
+    }
+
+    public void CreateNewPlayer(DatabaseReference DBreference, string playerUsername, int chaptersCompleted, int achievementsAcquired, int booksUnlocked, int gardenAreasUnlocked)
+    {
+        Player p = new Player(playerUsername, chaptersCompleted, achievementsAcquired, booksUnlocked, gardenAreasUnlocked);
+
+        var playerPath = DBreference.Push();
+        
+        playerPath.SetRawJsonValueAsync(JsonUtility.ToJson(p)); 
     }
 
     private IEnumerator Login(string email, string password)
@@ -139,38 +151,28 @@ public class FirebaseManager : MonoBehaviour
             warningLoginText.text = "";
             confirmLoginText.text = "Logged In Successfully!";
 
-            // **Retrieve user data**
-            yield return StartCoroutine(GetUserdata(User.UserId));
-
-            // After receiving user data:
-            UiManager.instance.UpdateUsernameText(username);
-            UiManager.instance.UpdateChaptersCompletedText(chaptersCompleted, 3);
-            UiManager.instance.UpdateAchievementsUnlockedText(achievementsUnlocked, 8);
-            UiManager.instance.UpdateBooksUnlockedText(booksUnlocked, 6);
-            UiManager.instance.UpdateGardenAreasText(gardenAreas["area1"], gardenAreas["area2"]);
-
             UiManager.instance.MainMenuScreen();
         }
     }
 
-    private IEnumerator SignUp(string email, string password, string username)
+    private async Task<IEnumerator> SignUp(string email, string password, string username)
     {
         if (username == "")
         {
             //If the username field is blank show a warning
             warningSignUpText.text = "Username Missing!";
+            return (IEnumerator)Task.CompletedTask;
         }
         else if (passwordSignUpField.text != passwordSignUpConfirmField.text)
         {
             //If the password does not match show a warning
             warningSignUpText.text = "Password Does Not Match!";
+            return (IEnumerator)Task.CompletedTask;
         }
         else
         {
             //Call the Firebase auth signin function passing the email and password
             Task<AuthResult> RegisterTask = auth.CreateUserWithEmailAndPasswordAsync(email, password);
-            //Wait until the task completes
-            yield return new WaitUntil(predicate: () => RegisterTask.IsCompleted);
 
             if (RegisterTask.Exception != null)
             {
@@ -210,8 +212,7 @@ public class FirebaseManager : MonoBehaviour
 
                     //Call the Firebase auth update user profile function passing the profile with the username
                     Task ProfileTask = User.UpdateUserProfileAsync(profile);
-                    //Wait until the task completes
-                    yield return new WaitUntil(predicate: () => ProfileTask.IsCompleted);
+
 
                     if (ProfileTask.Exception != null)
                     {
@@ -223,50 +224,34 @@ public class FirebaseManager : MonoBehaviour
                     }
                     else
                     {
-                        //Username is now set
-                        //Now return to login screen
-                        UiManager.instance.LoginScreen();
-                        warningSignUpText.text = "";
-                    }
+                        // Username is now set
+                        // Create player data structure with initial values
+                        Player newPlayer = new Player(username, 0, 0, 0, 0); // Adjust initial values as needed
 
-                    ResetInputFields();
+                        // Access user-specific player data reference
+                        DatabaseReference playerDataRef = DBreference.Child("playerData").Child(User.UserId);
+
+                        await Task.Run(async () =>
+                        {
+                            // Create the nested data structure with the username as a parent node
+                            await playerDataRef.Child("Username").SetValueAsync(username);
+                            await playerDataRef.Child("Username/ChaptersCompleted").SetValueAsync(newPlayer.chaptersCompleted);
+                            await playerDataRef.Child("Username/AchievementsAcquired").SetValueAsync(newPlayer.achievementsAcquired);
+                            await playerDataRef.Child("Username/BooksUnlocked").SetValueAsync(newPlayer.booksUnlocked);
+                            await playerDataRef.Child("Username/GardenAreasUnlocked").SetValueAsync(newPlayer.gardenAreasUnlocked);
+
+                            Debug.Log($"Player data saved for user: {User.UserId}");
+                            UiManager.instance.LoginScreen();
+
+                            return Task.CompletedTask;
+                        });
+
+                        warningSignUpText.text = "";
+                        ResetInputFields();
+                        return null;
+                    }
                 }
             }
-        }
-    }
-
-    private IEnumerator GetUserdata(string userId)
-    {
-        // Get user data reference
-        DatabaseReference userDataRef = DBreference.Child($"users/{userId}");
-
-        // Read user data asynchronously
-        Task<DataSnapshot> dataSnapshotTask = userDataRef.GetValueAsync();
-        yield return dataSnapshotTask;
-
-        // Check for errors
-        if (dataSnapshotTask.Exception != null)
-        {
-            Debug.LogError($"Error reading user data: {dataSnapshotTask.Exception}");
-        }
-        else
-        {
-            // Get data snapshot
-            DataSnapshot snapshot = dataSnapshotTask.Result;
-
-            // Extract user data values with proper conversion
-            username = (string)snapshot.Child("username").GetValue(true);
-            chaptersCompleted = int.Parse(snapshot.Child("chaptersCompleted").GetValue(true).ToString());
-            achievementsUnlocked = int.Parse(snapshot.Child("achievementsUnlocked").GetValue(true).ToString());
-            booksUnlocked = (int)snapshot.Child("booksUnlocked").GetValue(true);
-            gardenAreas = (Dictionary<string, string>)snapshot.Child("gardenAreas").GetValue(true); // Assuming 'gardenAreas' is a Dictionary<string, string>
-
-            // Update UI elements in main menu
-            UiManager.instance.UpdateUsernameText(username);
-            UiManager.instance.UpdateChaptersCompletedText(int.Parse(snapshot.Child("chaptersCompleted").GetValue(true).ToString()), 3); // Modify for your actual chapter count
-            UiManager.instance.UpdateAchievementsUnlockedText(int.Parse(snapshot.Child("achievementsUnlocked").GetValue(true).ToString()), 8); // Modify for your actual achievement count
-            UiManager.instance.UpdateBooksUnlockedText(booksUnlocked, 6); // Modify for your actual book count
-            UiManager.instance.UpdateGardenAreasText(gardenAreas["area1"], gardenAreas["area2"]);
         }
     }
 }
