@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UiManager : MonoBehaviour
 {
@@ -488,4 +489,56 @@ public class UiManager : MonoBehaviour
 #endif
     }
     #endregion
+
+    public void UpdateUsernameText(string username)
+    {
+        // Get a reference to the UI element that displays the username
+        // (replace with the actual name of your UI element)
+        TextMeshPro usernameText = GameObject.Find("Status_Username").GetComponent<TextMeshPro>();
+        usernameText.text = username;
+    }
+
+    public void UpdateChaptersCompletedText(int chaptersCompleted, int totalChapters)
+    {
+        // Get references to the UI elements for chapters completed and total chapters
+        TextMeshPro chaptersCompletedText = GameObject.Find("ChaptersCompletedText").GetComponent<TextMeshPro>();
+        TextMeshPro totalChaptersText = GameObject.Find("TotalChaptersText").GetComponent<TextMeshPro>();
+
+        // Update the text with the received data
+        chaptersCompletedText.text = chaptersCompleted.ToString();
+        totalChaptersText.text = totalChapters.ToString();
+    }
+
+    public void UpdateAchievementsUnlockedText(int achievementsUnlocked, int totalAchievements)
+    {
+        // Get references to the UI elements for achievements unlocked and total achievements
+        TextMeshPro achievementsUnlockedText = GameObject.Find("AchievementsUnlockedText").GetComponent<TextMeshPro>();
+        TextMeshPro totalAchievementsText = GameObject.Find("TotalAchievementsText").GetComponent<TextMeshPro>();
+
+        // Update the text with the received data
+        achievementsUnlockedText.text = achievementsUnlocked.ToString();
+        totalAchievementsText.text = totalAchievements.ToString();
+    }
+
+    public void UpdateBooksUnlockedText(int booksUnlocked, int totalBooks)
+    {
+        // Get references to the UI elements for books unlocked and total books
+        TextMeshPro booksUnlockedText = GameObject.Find("BooksUnlockedText").GetComponent<TextMeshPro>();
+        TextMeshPro totalBooksText = GameObject.Find("TotalBooksText").GetComponent<TextMeshPro>();
+
+        // Update the text with the received data
+        booksUnlockedText.text = booksUnlocked.ToString();
+        totalBooksText.text = totalBooks.ToString();
+    }
+
+    public void UpdateGardenAreasText(string area1, string area2)
+    {
+        // Get references to the UI elements for garden areas
+        TextMeshPro area1Text = GameObject.Find("GardenArea1Text").GetComponent<TextMeshPro>();
+        TextMeshPro area2Text = GameObject.Find("GardenArea2Text").GetComponent<TextMeshPro>();
+
+        // Update the text with the received data
+        area1Text.text = area1;
+        area2Text.text = area2;
+    }
 }

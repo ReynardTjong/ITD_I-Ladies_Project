@@ -5,6 +5,7 @@ using Firebase.Database;
 using Firebase.Auth;
 using TMPro;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 public class FirebaseManager : MonoBehaviour
 {
@@ -29,6 +30,13 @@ public class FirebaseManager : MonoBehaviour
     public TMP_InputField passwordSignUpField;
     public TMP_InputField passwordSignUpConfirmField;
     public TMP_Text warningSignUpText;
+
+    [Header("Status Statistics")]
+    public string username;
+    public int chaptersCompleted;
+    public int achievementsUnlocked;
+    public int booksUnlocked;
+    public Dictionary<string, string> gardenAreas;
 
     void Awake()
     {
@@ -131,6 +139,16 @@ public class FirebaseManager : MonoBehaviour
             warningLoginText.text = "";
             confirmLoginText.text = "Logged In Successfully!";
 
+            // **Retrieve user data**
+            yield return StartCoroutine(GetUserdata(User.UserId));
+
+            // After receiving user data:
+            UiManager.instance.UpdateUsernameText(username);
+            UiManager.instance.UpdateChaptersCompletedText(chaptersCompleted, 3);
+            UiManager.instance.UpdateAchievementsUnlockedText(achievementsUnlocked, 8);
+            UiManager.instance.UpdateBooksUnlockedText(booksUnlocked, 6);
+            UiManager.instance.UpdateGardenAreasText(gardenAreas["area1"], gardenAreas["area2"]);
+
             UiManager.instance.MainMenuScreen();
         }
     }
@@ -214,6 +232,41 @@ public class FirebaseManager : MonoBehaviour
                     ResetInputFields();
                 }
             }
+        }
+    }
+
+    private IEnumerator GetUserdata(string userId)
+    {
+        // Get user data reference
+        DatabaseReference userDataRef = DBreference.Child($"users/{userId}");
+
+        // Read user data asynchronously
+        Task<DataSnapshot> dataSnapshotTask = userDataRef.GetValueAsync();
+        yield return dataSnapshotTask;
+
+        // Check for errors
+        if (dataSnapshotTask.Exception != null)
+        {
+            Debug.LogError($"Error reading user data: {dataSnapshotTask.Exception}");
+        }
+        else
+        {
+            // Get data snapshot
+            DataSnapshot snapshot = dataSnapshotTask.Result;
+
+            // Extract user data values with proper conversion
+            username = (string)snapshot.Child("username").GetValue(true);
+            chaptersCompleted = int.Parse(snapshot.Child("chaptersCompleted").GetValue(true).ToString());
+            achievementsUnlocked = int.Parse(snapshot.Child("achievementsUnlocked").GetValue(true).ToString());
+            booksUnlocked = (int)snapshot.Child("booksUnlocked").GetValue(true);
+            gardenAreas = (Dictionary<string, string>)snapshot.Child("gardenAreas").GetValue(true); // Assuming 'gardenAreas' is a Dictionary<string, string>
+
+            // Update UI elements in main menu
+            UiManager.instance.UpdateUsernameText(username);
+            UiManager.instance.UpdateChaptersCompletedText(int.Parse(snapshot.Child("chaptersCompleted").GetValue(true).ToString()), 3); // Modify for your actual chapter count
+            UiManager.instance.UpdateAchievementsUnlockedText(int.Parse(snapshot.Child("achievementsUnlocked").GetValue(true).ToString()), 8); // Modify for your actual achievement count
+            UiManager.instance.UpdateBooksUnlockedText(booksUnlocked, 6); // Modify for your actual book count
+            UiManager.instance.UpdateGardenAreasText(gardenAreas["area1"], gardenAreas["area2"]);
         }
     }
 }
