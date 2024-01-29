@@ -67,6 +67,20 @@ public class UiManager : MonoBehaviour
     public GameObject cookingRecipe3;
     public GameObject cookingRecipe4;
 
+    [Header("Volume Menu")]
+    public GameObject volumeContents;
+
+    [Header("How To Play Menu")]
+    public GameObject howToPlayContents;
+
+    [Header("How To Play Buttons")]
+    public GameObject instrctionsBtn;
+    public GameObject vrControllerBindingsBtn;
+    public GameObject creditsBtn;
+
+    [Header("How To Play (Instructions")]
+    public GameObject instructionsContents;
+
     private void Awake()
     {
         // Singleton pattern to ensure only one instance exists
@@ -106,6 +120,7 @@ public class UiManager : MonoBehaviour
         playContents.SetActive(true);
         achievementsContents.SetActive(false);
         bookContents.SetActive(false);
+        volumeContents.SetActive(false);
     }
 
     public void BackToPlayContentsScreen()
@@ -193,6 +208,7 @@ public class UiManager : MonoBehaviour
         playContents.SetActive(false);
         achievementsContents.SetActive(true);
         bookContents.SetActive(false);
+        volumeContents.SetActive(false);
     }
     #endregion
 
@@ -203,6 +219,7 @@ public class UiManager : MonoBehaviour
         playContents.SetActive(false);
         achievementsContents.SetActive(false);
         bookContents.SetActive(true);
+        volumeContents.SetActive(false);
     }
 
     public void BackToBookScreen()
@@ -296,6 +313,16 @@ public class UiManager : MonoBehaviour
         cookingRecipe2.SetActive(false);
         cookingRecipe3.SetActive(false);
         cookingRecipe4.SetActive(true);
+    }
+    #endregion
+
+    #region Volume Menu Functions
+    public void VolumeScreen()
+    {
+        playContents.SetActive(false);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(false);
+        volumeContents.SetActive(true);
     }
     #endregion
 }
