@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using Firebase;
+using Firebase.Database;
 using Firebase.Auth;
 using TMPro;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ public class FirebaseManager : MonoBehaviour
     public DependencyStatus dependencyStatus;
     public FirebaseAuth auth;
     public FirebaseUser User;
+    public DatabaseReference DBreference;
 
     //Login variables
     [Header("Login")]
@@ -51,6 +53,7 @@ public class FirebaseManager : MonoBehaviour
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
+        DBreference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
     //Function for the login button
@@ -64,6 +67,12 @@ public class FirebaseManager : MonoBehaviour
     {
         //Call the register coroutine passing the email, password, and username
         StartCoroutine(SignUp(emailSignUpField.text, passwordSignUpField.text, usernameSignUpField.text));
+    }
+
+    public void LogoutButton()
+    {
+        auth.SignOut();
+        UiManager.instance.LoginScreen();
     }
 
     public void ResetInputFields()
@@ -121,6 +130,8 @@ public class FirebaseManager : MonoBehaviour
             Debug.LogFormat("User signed in successfully: {0} ({1})", User.DisplayName, User.Email);
             warningLoginText.text = "";
             confirmLoginText.text = "Logged In Successfully!";
+
+            UiManager.instance.MainMenuScreen();
         }
     }
 

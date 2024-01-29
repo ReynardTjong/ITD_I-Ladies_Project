@@ -93,8 +93,12 @@ public class UiManager : MonoBehaviour
     [Header("Status Menu")]
     public GameObject statusContents;
 
-    [Header("Logout")]
+    [Header("Logout Menu")]
     public GameObject logoutContents;
+
+    [Header("Quit Menu")]
+    public GameObject quitBtn;
+    public GameObject quitContents;
 
     private void Awake()
     {
@@ -117,6 +121,8 @@ public class UiManager : MonoBehaviour
     {
         loginPage.SetActive(true);
         signUpPage.SetActive(false);
+        mainMenu.SetActive(false);
+        quitBtn.SetActive(true);
         firebaseManager.ResetInputFields();
     }
 
@@ -124,10 +130,21 @@ public class UiManager : MonoBehaviour
     {
         signUpPage.SetActive(true);
         loginPage.SetActive(false);
+        mainMenu.SetActive(false);
+        quitBtn.SetActive(true);
         firebaseManager.ResetInputFields();
     }
     #endregion
 
+    #region Main Menu Functions
+    public void MainMenuScreen()
+    {
+        loginPage.SetActive(false);
+        signUpPage.SetActive(false);
+        mainMenu.SetActive(true);
+        quitBtn.SetActive(false);
+    }
+    #endregion
 
     #region Play Menu Functions
     public void PlayContentsScreen()
@@ -448,6 +465,27 @@ public class UiManager : MonoBehaviour
     public void DisableLogoutScreen()
     {
         logoutContents.SetActive(false);
+    }
+    #endregion
+
+    #region Quit Menu Functions
+    public void QuitScreen()
+    {
+        quitContents.SetActive(true);
+    }
+
+    public void DisableQuitScreen()
+    {
+       quitContents.SetActive(false);
+    }
+
+    public void QuitApplication()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Applicaation.Quit();
+#endif
     }
     #endregion
 }
