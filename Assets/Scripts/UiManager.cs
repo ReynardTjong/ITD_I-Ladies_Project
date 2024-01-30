@@ -179,7 +179,7 @@ public class UiManager : MonoBehaviour
         chapterContents.SetActive(true);
     }
 
-    public void BackToCampaignMissionsScreen()
+    public void BackToCampaignChaptersScreen()
     {
         chapterBtns.SetActive(true);
         returnToPlayContents.SetActive(true);
