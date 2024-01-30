@@ -151,12 +151,12 @@ public class FirebaseManager : MonoBehaviour
                     UserProfile profile = new UserProfile { DisplayName = username };
                     await User.UpdateUserProfileAsync(profile);
 
-                    // Create player data structure with initial values
-                    Player newPlayer = new Player(username, 0, 0, 0, 0); // Adjust initial values as needed
-
+                    // Set player data structure with initial values
                     DatabaseReference playerDataRef = DBreference.Child("playerData").Child(User.UserId);
 
-                    await playerDataRef.Child("Username").SetValueAsync(username);
+                    Player newPlayer = new Player(username, 0, 0, 0, 0); // Adjust initial values as needed
+
+                    await playerDataRef.Child("Username").SetValueAsync(username); // Set username here
                     await playerDataRef.Child("ChaptersCompleted").SetValueAsync(newPlayer.chaptersCompleted);
                     await playerDataRef.Child("AchievementsAcquired").SetValueAsync(newPlayer.achievementsAcquired);
                     await playerDataRef.Child("BooksUnlocked").SetValueAsync(newPlayer.booksUnlocked);

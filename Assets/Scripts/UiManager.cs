@@ -485,7 +485,7 @@ public class UiManager : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-        Applicaation.Quit();
+        Application.Quit();
 #endif
     }
     #endregion
