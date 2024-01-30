@@ -29,20 +29,16 @@ public class StatusPageManager : MonoBehaviour
 
     private async void DisplayUserStatus()
     {
-        // Check if the user is logged in
         if (FirebaseAuth.DefaultInstance.CurrentUser != null)
         {
             string userId = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
 
-            // Get the reference to the current user's data
             DatabaseReference userReference = playerDataReference.Child(userId);
 
-            // Retrieve user data from the database
             DataSnapshot snapshot = await userReference.GetValueAsync();
 
             if (snapshot.Exists)
             {
-                // Update UI with user data
                 usernameText.text = "Username: " + snapshot.Child("Username").Value.ToString();
                 chaptersCompletedText.text = "No. Missions Completed: " + snapshot.Child("MissionsCompleted").Value.ToString();
                 achievementsAcquiredText.text = "No. Achievements Acquired: " + snapshot.Child("AchievementsAcquired").Value.ToString();
