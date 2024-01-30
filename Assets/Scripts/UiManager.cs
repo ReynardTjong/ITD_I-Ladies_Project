@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
@@ -115,7 +114,12 @@ public class UiManager : MonoBehaviour
             Destroy(this);
         }
 
-        firebaseManager = GetComponent<FirebaseManager>();
+        
+    }
+
+    private void Start()
+    {
+        firebaseManager = FirebaseManager.instance;
     }
 
     #region Login/Sign Up Page Functions

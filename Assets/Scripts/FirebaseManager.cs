@@ -34,8 +34,13 @@ public class FirebaseManager : MonoBehaviour
     public TMP_InputField passwordSignUpConfirmField;
     public TMP_Text warningSignUpText;
 
+    public static FirebaseManager instance;
+
     void Awake()
     {
+
+        instance = this;
+
         //Check that all of the necessary dependencies for Firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
@@ -50,6 +55,8 @@ public class FirebaseManager : MonoBehaviour
                 Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
             }
         });
+
+        
     }
 
     private void InitializeFirebase()
