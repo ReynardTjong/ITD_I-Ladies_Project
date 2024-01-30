@@ -15144,9 +15144,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 202907739}
+      - m_Target: {fileID: 202907740}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: BackToPlayContentsScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22066,9 +22066,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 202907739}
+      - m_Target: {fileID: 202907740}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: BackToPlayContentsScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35557,6 +35557,6 @@ SceneRoots:
   - {fileID: 1368957047}
   - {fileID: 1543122981}
   - {fileID: 1391938385}
-  - {fileID: 1134353704}
   - {fileID: 974832989}
   - {fileID: 202907741}
+  - {fileID: 1134353704}
