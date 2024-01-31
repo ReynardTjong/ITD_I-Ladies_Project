@@ -103,15 +103,6 @@ public class FirebaseManager : MonoBehaviour
         passwordSignUpConfirmField.text = "";
     }
 
-    public void CreateNewPlayer(DatabaseReference DBreference, string playerUsername, int chaptersCompleted, int achievementsAchieved, int booksUnlocked, int gardenAreasUnlocked)
-    {
-        Player p = new Player(playerUsername, chaptersCompleted, achievementsAchieved, booksUnlocked, gardenAreasUnlocked);
-
-        var playerPath = DBreference.Push();
-        
-        playerPath.SetRawJsonValueAsync(JsonUtility.ToJson(p)); 
-    }
-
     private async Task Login(string email, string password)
     {
         try
