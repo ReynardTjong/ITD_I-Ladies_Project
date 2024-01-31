@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestingGameArea.unity
     guid: 791a6d00962fc524f810265222f67120
+  - enabled: 1
+    path: Assets/Scenes/Kara'sTestingArea.unity
+    guid: dd265deb542cc484b9fce6b5fbd6fcd8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 02eb927b6ccde1b4aa88b7f7342d251f,
       type: 2}
