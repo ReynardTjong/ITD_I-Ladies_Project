@@ -11,6 +11,8 @@ using System.Collections.Generic;
 
 public class FirebaseManager : MonoBehaviour
 {
+    public static FirebaseManager instance;
+
     //Firebase variables
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
@@ -21,20 +23,25 @@ public class FirebaseManager : MonoBehaviour
 
     //Login variables
     [Header("Login")]
-    public TMP_InputField emailLoginField;
-    public TMP_InputField passwordLoginField;
-    public TMP_Text warningLoginText;
-    public TMP_Text confirmLoginText;
+    [SerializeField] private TMP_InputField emailLoginField;
+    [SerializeField] private TMP_InputField passwordLoginField;
+    [SerializeField] private TMP_Text warningLoginText;
+    [SerializeField] private TMP_Text confirmLoginText;
 
     //SignUp variables
     [Header("SignUp")]
-    public TMP_InputField usernameSignUpField;
-    public TMP_InputField emailSignUpField;
-    public TMP_InputField passwordSignUpField;
-    public TMP_InputField passwordSignUpConfirmField;
-    public TMP_Text warningSignUpText;
+    [SerializeField] private TMP_InputField usernameSignUpField;
+    [SerializeField] private TMP_InputField emailSignUpField;
+    [SerializeField] private TMP_InputField passwordSignUpField;
+    [SerializeField] private TMP_InputField passwordSignUpConfirmField;
+    [SerializeField] private TMP_Text warningSignUpText;
 
-    public static FirebaseManager instance;
+    [Header("Status")]
+    [SerializeField] private TMP_Text usernameText;
+    [SerializeField] private TMP_Text chaptersCompletedText;
+    [SerializeField] private TMP_Text achievementsAcquiredText;
+    [SerializeField] private TMP_Text booksUnlockedText;
+    [SerializeField] private TMP_Text gardenAreasUnlockedText;
 
     void Awake()
     {
@@ -55,8 +62,6 @@ public class FirebaseManager : MonoBehaviour
                 Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
             }
         });
-
-        
     }
 
     private void InitializeFirebase()
@@ -105,6 +110,14 @@ public class FirebaseManager : MonoBehaviour
         var playerPath = DBreference.Push();
         
         playerPath.SetRawJsonValueAsync(JsonUtility.ToJson(p)); 
+    }
+
+    // Call this method after a successful login
+    private async Task OnLoginSuccess(string userId)
+    {
+        // Update UI with player data
+        await UpdatePlayerDataUI(userId);
+        // Additional actions after login...
     }
 
     private async Task Login(string email, string password)
@@ -159,11 +172,11 @@ public class FirebaseManager : MonoBehaviour
                     await User.UpdateUserProfileAsync(profile);
 
                     // Set player data structure with initial values
-                    DatabaseReference playerDataRef = DBreference.Child("playerData").Child(User.UserId);
+                    DatabaseReference playerDataRef = DBreference.Child("Players").Child(User.UserId).Child(username);
 
                     Player newPlayer = new Player(username, 0, 0, 0, 0); // Adjust initial values as needed
 
-                    await playerDataRef.Child("Username").SetValueAsync(username); // Set username here
+                    // Set attributes under the username node
                     await playerDataRef.Child("ChaptersCompleted").SetValueAsync(newPlayer.chaptersCompleted);
                     await playerDataRef.Child("AchievementsAcquired").SetValueAsync(newPlayer.achievementsAcquired);
                     await playerDataRef.Child("BooksUnlocked").SetValueAsync(newPlayer.booksUnlocked);
@@ -183,6 +196,8 @@ public class FirebaseManager : MonoBehaviour
             }
         }
     }
+
+
 
     // Error handling functions (replace with your actual error handling logic)
     private void HandleLoginError(Exception ex)
@@ -259,6 +274,42 @@ public class FirebaseManager : MonoBehaviour
             // Handle other general errors
             warningSignUpText.text = "An error occurred. Please try again later.";
             Debug.LogError($"Signup error: {ex.Message}");
+        }
+    }
+
+    public async Task UpdatePlayerDataUI(string userId)
+    {
+        try
+        {
+            // Get player data from database
+            DatabaseReference playerDataRef = FirebaseDatabase.DefaultInstance
+                .GetReference("Players").Child(userId);
+
+            DataSnapshot snapshot = await playerDataRef.GetValueAsync();
+
+            if (snapshot.Exists)
+            {
+                // Deserialize the player data from the snapshot
+                Player player = JsonUtility.FromJson<Player>(snapshot.GetRawJsonValue());
+
+                // Add debug statement to check the retrieved username
+                Debug.Log("Retrieved Username: " + player.playerUsername);
+
+                // Update UI text fields with player data
+                usernameText.text = player.playerUsername;
+                chaptersCompletedText.text = player.chaptersCompleted.ToString();
+                achievementsAcquiredText.text = player.achievementsAcquired.ToString();
+                booksUnlockedText.text = player.booksUnlocked.ToString();
+                gardenAreasUnlockedText.text = player.gardenAreasUnlocked.ToString();
+            }
+            else
+            {
+                Debug.LogWarning("Player data not found in the database for user ID: " + userId);
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Error fetching player data: " + ex.Message);
         }
     }
 }

@@ -8,7 +8,7 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
 
     [Header("Firebase Script Reference")]
-    public FirebaseManager firebaseManager;
+    [SerializeField] private FirebaseManager firebaseManager;
 
     [Header("Login/SignUp")]
     public GameObject loginPage;
@@ -116,7 +116,6 @@ public class UiManager : MonoBehaviour
 
         
     }
-
     private void Start()
     {
         firebaseManager = FirebaseManager.instance;
@@ -453,6 +452,8 @@ public class UiManager : MonoBehaviour
         volumeContents.SetActive(false);
         howToPlayContents.SetActive(false);
         statusContents.SetActive(true);
+
+        UpdatePlayerStatus();
     }
     #endregion
 
@@ -498,5 +499,18 @@ public class UiManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    private async void UpdatePlayerStatus()
+    {
+        // Ensure FirebaseManager instance is available
+        if (FirebaseManager.instance != null)
+        {
+            // Get the current user's ID from Firebase authentication
+            string userId = FirebaseManager.instance.User.UserId;
+
+            // Call the method to update player data UI in FirebaseManager
+            await FirebaseManager.instance.UpdatePlayerDataUI(userId);
+        }
     }
 }
