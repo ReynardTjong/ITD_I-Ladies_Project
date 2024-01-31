@@ -24110,7 +24110,7 @@ MonoBehaviour:
   warningSignUpText: {fileID: 1376876098}
   usernameText: {fileID: 459654113}
   chaptersCompletedText: {fileID: 234857298}
-  achievementsAcquiredText: {fileID: 1832803744}
+  achievementsAchievedText: {fileID: 1832803744}
   booksUnlockedText: {fileID: 1453180352}
   gardenAreasUnlockedText: {fileID: 774621415}
 --- !u!4 &1539586358

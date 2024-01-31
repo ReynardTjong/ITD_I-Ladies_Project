@@ -39,7 +39,7 @@ public class FirebaseManager : MonoBehaviour
     [Header("Status")]
     [SerializeField] private TMP_Text usernameText;
     [SerializeField] private TMP_Text chaptersCompletedText;
-    [SerializeField] private TMP_Text achievementsAcquiredText;
+    [SerializeField] private TMP_Text achievementsAchievedText;
     [SerializeField] private TMP_Text booksUnlockedText;
     [SerializeField] private TMP_Text gardenAreasUnlockedText;
 
@@ -103,21 +103,13 @@ public class FirebaseManager : MonoBehaviour
         passwordSignUpConfirmField.text = "";
     }
 
-    public void CreateNewPlayer(DatabaseReference DBreference, string playerUsername, int chaptersCompleted, int achievementsAcquired, int booksUnlocked, int gardenAreasUnlocked)
+    public void CreateNewPlayer(DatabaseReference DBreference, string playerUsername, int chaptersCompleted, int achievementsAchieved, int booksUnlocked, int gardenAreasUnlocked)
     {
-        Player p = new Player(playerUsername, chaptersCompleted, achievementsAcquired, booksUnlocked, gardenAreasUnlocked);
+        Player p = new Player(playerUsername, chaptersCompleted, achievementsAchieved, booksUnlocked, gardenAreasUnlocked);
 
         var playerPath = DBreference.Push();
         
         playerPath.SetRawJsonValueAsync(JsonUtility.ToJson(p)); 
-    }
-
-    // Call this method after a successful login
-    private async Task OnLoginSuccess(string userId)
-    {
-        // Update UI with player data
-        await UpdatePlayerDataUI(userId);
-        // Additional actions after login...
     }
 
     private async Task Login(string email, string password)
@@ -145,7 +137,7 @@ public class FirebaseManager : MonoBehaviour
         }
     }
 
-    private async Task SignUp(string email, string password, string username)
+    public async Task SignUp(string email, string password, string username)
     {
         if (username == "")
         {
@@ -172,15 +164,14 @@ public class FirebaseManager : MonoBehaviour
                     await User.UpdateUserProfileAsync(profile);
 
                     // Set player data structure with initial values
-                    DatabaseReference playerDataRef = DBreference.Child("Players").Child(User.UserId).Child(username);
+                    DatabaseReference playerDataRef = DBreference.Child("Players").Child(User.UserId);
 
-                    Player newPlayer = new Player(username, 0, 0, 0, 0); // Adjust initial values as needed
-
-                    // Set attributes under the username node
-                    await playerDataRef.Child("ChaptersCompleted").SetValueAsync(newPlayer.chaptersCompleted);
-                    await playerDataRef.Child("AchievementsAcquired").SetValueAsync(newPlayer.achievementsAcquired);
-                    await playerDataRef.Child("BooksUnlocked").SetValueAsync(newPlayer.booksUnlocked);
-                    await playerDataRef.Child("GardenAreasUnlocked").SetValueAsync(newPlayer.gardenAreasUnlocked);
+                    // Set child nodes for user data
+                    await playerDataRef.Child("Username").SetValueAsync(username);
+                    await playerDataRef.Child("ChaptersCompleted").SetValueAsync(0);
+                    await playerDataRef.Child("AchievementsAchieved").SetValueAsync(0);
+                    await playerDataRef.Child("BooksUnlocked").SetValueAsync(0);
+                    await playerDataRef.Child("GardenAreasUnlocked").SetValueAsync(0);
 
                     Debug.Log($"Player data saved for user: {User.UserId}");
                     UiManager.instance.LoginScreen();
@@ -196,8 +187,6 @@ public class FirebaseManager : MonoBehaviour
             }
         }
     }
-
-
 
     // Error handling functions (replace with your actual error handling logic)
     private void HandleLoginError(Exception ex)
@@ -277,6 +266,7 @@ public class FirebaseManager : MonoBehaviour
         }
     }
 
+    // Function to update UI with player data
     public async Task UpdatePlayerDataUI(string userId)
     {
         try
@@ -290,17 +280,41 @@ public class FirebaseManager : MonoBehaviour
             if (snapshot.Exists)
             {
                 // Deserialize the player data from the snapshot
-                Player player = JsonUtility.FromJson<Player>(snapshot.GetRawJsonValue());
+                Player player = new Player();
+                IDictionary<string, object> dictPlayer = (IDictionary<string, object>)snapshot.Value;
 
-                // Add debug statement to check the retrieved username
-                Debug.Log("Retrieved Username: " + player.playerUsername);
+                if (dictPlayer.ContainsKey("Username"))
+                {
+                    player.playerUsername = dictPlayer["Username"].ToString();
+                }
+
+                if (dictPlayer.ContainsKey("ChaptersCompleted"))
+                {
+                    player.chaptersCompleted = Convert.ToInt32(dictPlayer["ChaptersCompleted"]);
+                }
+
+                if (dictPlayer.ContainsKey("AchievementsAchieved"))
+                {
+                    player.chaptersCompleted = Convert.ToInt32(dictPlayer["AchievementsAchieved"]);
+                }
+
+                if (dictPlayer.ContainsKey("BooksUnlocked"))
+                {
+                    player.chaptersCompleted = Convert.ToInt32(dictPlayer["BooksUnlocked"]);
+                }
+
+                if (dictPlayer.ContainsKey("GardenAreasUnlocked"))
+                {
+                    player.chaptersCompleted = Convert.ToInt32(dictPlayer["GardenAreasUnlocked"]);
+                }
 
                 // Update UI text fields with player data
                 usernameText.text = player.playerUsername;
                 chaptersCompletedText.text = player.chaptersCompleted.ToString();
-                achievementsAcquiredText.text = player.achievementsAcquired.ToString();
+                achievementsAchievedText.text = player.achievementsAchieved.ToString();
                 booksUnlockedText.text = player.booksUnlocked.ToString();
                 gardenAreasUnlockedText.text = player.gardenAreasUnlocked.ToString();
+                // Update other UI elements similarly
             }
             else
             {
