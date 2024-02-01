@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class clicker : MonoBehaviour
 {
@@ -56,7 +57,24 @@ public class clicker : MonoBehaviour
 
     void ChangeScene()
     {
-        // Change scene when the timer expires
-        SceneManager.LoadScene("Rey'sTestingMenuArea");
+        // Access the PersistentData instance
+        PersistentData persistentData = PersistentData.instance;
+
+        if (persistentData != null)
+        {
+            // Find the Image component in the next scene
+            Image nextSceneImage = GameObject.Find("lockerz").GetComponent<Image>();
+
+            // Change the sprite to the second image
+            nextSceneImage.sprite = persistentData.secondImage;
+
+            // Load the next scene
+            SceneManager.LoadScene("Rey'sTestingMenuArea");
+        }
+        else
+        {
+            Debug.LogError("PersistentData script not found.");
+        }
     }
+
 }
