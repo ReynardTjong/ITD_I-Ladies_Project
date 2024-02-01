@@ -1,12 +1,13 @@
+// clicker.cs
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class clicker : MonoBehaviour
 {
     public TMP_Text clickCountText;
     public GameObject panel; // Reference to the UI panel
+    public AchievementManager achievementManager;
 
     private int clickCount = 0;
     private float panelDisplayTime = 3f;
@@ -23,6 +24,7 @@ public class clicker : MonoBehaviour
         // Check if the click count has reached 10
         if (clickCount >= 10 && !isPanelActive)
         {
+            // Call the AchievementManager to check and update the achievement progress
             ShowPanel();
         }
 
@@ -42,6 +44,9 @@ public class clicker : MonoBehaviour
     {
         clickCount++;
         UpdateClickCountText();
+
+        // Update the achievement progress
+        achievementManager.achievements[0].isAchieved = () => clickCount >= 10;
     }
 
     void UpdateClickCountText()
@@ -57,24 +62,7 @@ public class clicker : MonoBehaviour
 
     void ChangeScene()
     {
-        // Access the PersistentData instance
-        PersistentData persistentData = PersistentData.instance;
-
-        if (persistentData != null)
-        {
-            // Find the Image component in the next scene
-            Image nextSceneImage = GameObject.Find("lockerz").GetComponent<Image>();
-
-            // Change the sprite to the second image
-            nextSceneImage.sprite = persistentData.secondImage;
-
-            // Load the next scene
-            SceneManager.LoadScene("Rey'sTestingMenuArea");
-        }
-        else
-        {
-            Debug.LogError("PersistentData script not found.");
-        }
+        // Change scene when the timer expires
+        SceneManager.LoadScene("Rey'sTestingMenuArea");
     }
-
 }
