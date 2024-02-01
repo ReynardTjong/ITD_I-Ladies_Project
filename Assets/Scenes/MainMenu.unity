@@ -7311,13 +7311,13 @@ RectTransform:
   m_Children:
   - {fileID: 2072451590}
   - {fileID: 1985943581}
-  - {fileID: 1243435429}
   - {fileID: 221050097}
   - {fileID: 895231128}
   - {fileID: 517349937}
   - {fileID: 543849089}
   - {fileID: 1034438496}
   - {fileID: 2054892223}
+  - {fileID: 1243435429}
   m_Father: {fileID: 855946271}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -18022,11 +18022,11 @@ MonoBehaviour:
   passwordSignUpField: {fileID: 517349938}
   passwordSignUpConfirmField: {fileID: 543849090}
   warningSignUpText: {fileID: 1034438497}
-  usernameText: {fileID: 0}
-  chaptersCompletedText: {fileID: 0}
-  achievementsAchievedText: {fileID: 0}
-  booksUnlockedText: {fileID: 0}
-  gardenAreasUnlockedText: {fileID: 0}
+  usernameText: {fileID: 317851931}
+  chaptersCompletedText: {fileID: 227639672}
+  achievementsAchievedText: {fileID: 229024212}
+  booksUnlockedText: {fileID: 276933468}
+  gardenAreasUnlockedText: {fileID: 374420906}
 --- !u!4 &974832989
 Transform:
   m_ObjectHideFlags: 0
@@ -19220,7 +19220,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034438495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1.0000306, y: 1.0000306, z: 1.0000306}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19228,7 +19228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -402.00003}
+  m_AnchoredPosition: {x: 670, y: -402.00003}
   m_SizeDelta: {x: 800, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034438497
