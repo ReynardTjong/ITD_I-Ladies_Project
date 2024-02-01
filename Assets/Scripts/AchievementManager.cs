@@ -1,5 +1,7 @@
 // AchievementManager.cs
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
 using System.Collections.Generic;
 
 public class AchievementManager : MonoBehaviour
@@ -8,30 +10,59 @@ public class AchievementManager : MonoBehaviour
     public class Achievement
     {
         public string name;
-        public System.Func<bool> isAchieved;
+        public Func<bool> isAchieved;
         public bool isCompleted;
     }
 
     public List<Achievement> achievements = new List<Achievement>();
     public PersistentManager persistentManager;
 
-    void Start()
+    // Ensure that only one instance of AchievementManager exists
+    private static AchievementManager _instance;
+    void Awake()
     {
-        Debug.Log("AchievementManager Started.");
-
-        // Add at least one achievement to the list
-        achievements.Add(new Achievement
-        {
-            name = "Clicker Pro",
-            isAchieved = () => false,
-            isCompleted = false
-        });
-        // Add more achievements as needed
-
-        // Make the AchievementManager persist across scenes
-        DontDestroyOnLoad(gameObject);
+        Debug.Log("AchievementManager Awake");
     }
 
+    void Start()
+    {
+        // Ensure only one instance of AchievementManager exists
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate instances
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject); // Persist across scenes
+
+            Debug.Log("AchievementManager Started.");
+
+            // Add at least one achievement to the list
+            achievements.Add(new Achievement
+            {
+                name = "Clicker Pro",
+                isAchieved = () => false,
+                isCompleted = false
+            });
+            // Add more achievements as needed
+        }
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Perform any scene-specific initialization here if needed
+    }
 
     void Update()
     {
