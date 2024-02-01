@@ -8,7 +8,7 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
 
     [Header("Firebase Script Reference")]
-    [SerializeField] private FirebaseManager firebaseManager;
+    public FirebaseManager firebaseManager;
 
     [Header("Login/SignUp")]
     public GameObject loginPage;
