@@ -3,7 +3,37 @@ guid: 6f89b1994b06f427d822fd6fc467dafe
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarrotTop
+    second: {fileID: 2100000, guid: b226952d9d8eb8a4d87e106e387e17b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: ad167bf75fea0974f8508f7e47b34d6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal2
+    second: {fileID: 2100000, guid: 955c3fa622557e54ea78b495b498b157, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SomeMaterial
+    second: {fileID: 2100000, guid: bd59b60d0606821408b9f51ca0de236c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert22
+    second: {fileID: 2100000, guid: 82bdaa88772c5e0449e9e5c1eb509b16, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: AtlasTexture_GardeningTools_AlbedoTransparency.1001
+    second: {fileID: 2800000, guid: 4befa4dc4cf27394cb80d9d5822a8d6d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

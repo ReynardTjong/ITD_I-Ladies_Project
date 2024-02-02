@@ -8,13 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SomeMaterial
-    second: {fileID: 7987867544983855355, guid: 6f89b1994b06f427d822fd6fc467dafe,
-      type: 3}
+    second: {fileID: 2100000, guid: 996b5f07c6f717746b00e2418d50f594, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: AtlasTexture_GardeningTools_AlbedoTransparency.1001
-    second: {fileID: 2800000, guid: 86ce592e3f7a14422a1506089f7c2520, type: 3}
+    second: {fileID: 2800000, guid: 08a420fef9203a541a3dc613435122dc, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,102 @@ guid: 816c50ec32a05074388489d3ed5a1ca9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blender2
+    second: {fileID: 2100000, guid: 8572831a5345d894491d1c1534f80602, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bowls1
+    second: {fileID: 2100000, guid: 21758f5bb0840064e8c4017ae5f8d5e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair_
+    second: {fileID: 2100000, guid: 19f83f2190fab724bb5d863e58460b3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Counter
+    second: {fileID: 2100000, guid: ae20f4e038f2ea74ca836f995fb1bb01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cups1
+    second: {fileID: 2100000, guid: 6e3e0a54aa4e0c5478b08bcf2cca4ef7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cutlery
+    second: {fileID: 2100000, guid: b8db7510728144d41b0bd06e264bc09f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 9e87bc976c68eca4c9f067b3afe8ad38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knife2
+    second: {fileID: 2100000, guid: ccfd022d98b29bc4a86c894783c418ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knobs1
+    second: {fileID: 2100000, guid: 10f44d6744733b947a314b85e83e9aea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven1
+    second: {fileID: 2100000, guid: 85576f091cc667d4496dedc368dda869, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pan2
+    second: {fileID: 2100000, guid: c363df3304ba08644b6ef83866e52a96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate3
+    second: {fileID: 2100000, guid: eba0ccf5f61808e49b349ab80577b5c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pot2
+    second: {fileID: 2100000, guid: ca6db0792d276644a8fa50ad4a050ae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spatula1
+    second: {fileID: 2100000, guid: efb0499c7c90092468ac1857ac02875c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stove1
+    second: {fileID: 2100000, guid: 5c56443db0171214a93a7332426fe766, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wallpaper
+    second: {fileID: 2100000, guid: dc5e75a728661a94d94734af848b0d05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_Frame
+    second: {fileID: 2100000, guid: c70741ebf2eaea5479905ccefaa8592f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 44107d02b8766c04a80504e4d0b5a5cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: fe639d3831903e146b654cf0084164b8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

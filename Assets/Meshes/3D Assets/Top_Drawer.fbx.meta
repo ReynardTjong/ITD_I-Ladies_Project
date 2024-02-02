@@ -3,7 +3,32 @@ guid: 758896febf8a44f499040186962a7570
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Counter
+    second: {fileID: 2100000, guid: aff4fb61736969e4588d365c8c40b88a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cutlery
+    second: {fileID: 2100000, guid: 69fa1a2e50b4b6c49a7da01896390ac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knife2
+    second: {fileID: 2100000, guid: 444549130ba44194ea01ca496d2846be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spatula1
+    second: {fileID: 2100000, guid: 6718f68ddfbf95e428aefeb90e7fd049, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 25306826b24e7d74693f6c7e52d1a9e6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

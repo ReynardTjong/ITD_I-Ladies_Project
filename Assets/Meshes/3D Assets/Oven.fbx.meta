@@ -3,7 +3,22 @@ guid: 69de40f07349a6048b171b2bcd760b11
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knobs1
+    second: {fileID: 2100000, guid: c78449cce33fc1d43a5de32fe6a7537f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven1
+    second: {fileID: 2100000, guid: 49d3aa9b278accb44a700b27383cab89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stove1
+    second: {fileID: 2100000, guid: 6545113154ad0b045a2ae6a9c9ef90ff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
