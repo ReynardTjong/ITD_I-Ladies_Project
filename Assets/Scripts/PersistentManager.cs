@@ -5,13 +5,11 @@ public class PersistentManager : MonoBehaviour
     // Example: persistent data
     public bool achievement1Unlocked;
 
-    // Other persistent data variables
-
     // Singleton pattern for PersistentManager
     public static PersistentManager Instance { get; private set; }
 
-    // Reference to the AchievementManager
-    public AchievementManager achievementManager;
+    // Reference to the AchievementManager (no need to make it public anymore)
+    private AchievementManager achievementManager;
 
     void Awake()
     {
@@ -21,9 +19,21 @@ public class PersistentManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (Instance != this)
         {
+            // Destroy duplicate instances in the same scene
             Destroy(gameObject);
+        }
+    }
+
+    void Start()
+    {
+        // Find the AchievementManager in the scene
+        achievementManager = FindObjectOfType<AchievementManager>();
+
+        if (achievementManager == null)
+        {
+            Debug.LogError("AchievementManager not found in the scene.");
         }
     }
 

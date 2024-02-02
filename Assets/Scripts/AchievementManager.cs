@@ -1,4 +1,3 @@
-// AchievementManager.cs
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
@@ -15,10 +14,11 @@ public class AchievementManager : MonoBehaviour
     }
 
     public List<Achievement> achievements = new List<Achievement>();
-    public PersistentManager persistentManager;
+    private PersistentManager persistentManager; // No need to make it public anymore
 
     // Ensure that only one instance of AchievementManager exists
     private static AchievementManager _instance;
+
     void Awake()
     {
         Debug.Log("AchievementManager Awake");
@@ -46,6 +46,14 @@ public class AchievementManager : MonoBehaviour
                 isCompleted = false
             });
             // Add more achievements as needed
+
+            // Find the PersistentManager in the scene
+            persistentManager = FindObjectOfType<PersistentManager>();
+
+            if (persistentManager == null)
+            {
+                Debug.LogError("PersistentManager not found in the scene.");
+            }
         }
     }
 
@@ -112,16 +120,23 @@ public class AchievementManager : MonoBehaviour
     {
         Debug.Log("Updating Persistent Data for Achievement: " + achievementName);
 
-        // Update persistent data based on the unlocked achievement
-        switch (achievementName)
+        if (persistentManager != null)
         {
-            case "Clicker Pro":
-                persistentManager.achievement1Unlocked = true;
-                // Add more cases for other achievements as needed
-                break;
-            default:
-                Debug.LogWarning("Unexpected achievement name: " + achievementName);
-                break;
+            // Update persistent data based on the unlocked achievement
+            switch (achievementName)
+            {
+                case "Clicker Pro":
+                    persistentManager.achievement1Unlocked = true;
+                    // Add more cases for other achievements as needed
+                    break;
+                default:
+                    Debug.LogWarning("Unexpected achievement name: " + achievementName);
+                    break;
+            }
+        }
+        else
+        {
+            Debug.LogError("PersistentManager is not assigned. Make sure to assign it in the Unity Editor.");
         }
     }
 }

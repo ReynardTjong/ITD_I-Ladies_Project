@@ -1,4 +1,3 @@
-// clicker.cs
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -7,7 +6,6 @@ public class clicker : MonoBehaviour
 {
     public TMP_Text clickCountText;
     public GameObject panel; // Reference to the UI panel
-    public AchievementManager achievementManager;
 
     private int clickCount = 0;
     private float panelDisplayTime = 3f;
@@ -24,7 +22,7 @@ public class clicker : MonoBehaviour
         // Check if the click count has reached 10
         if (clickCount >= 10 && !isPanelActive)
         {
-            // Call the AchievementManager to check and update the achievement progress
+            // Show the panel when the click count reaches 10
             ShowPanel();
         }
 
@@ -44,25 +42,36 @@ public class clicker : MonoBehaviour
     {
         clickCount++;
         UpdateClickCountText();
-
-        // Update the achievement progress
-        achievementManager.achievements[0].isAchieved = () => clickCount >= 10;
     }
 
     void UpdateClickCountText()
     {
         clickCountText.text = "Clicks: " + clickCount.ToString();
+
+        // Check and update the achievement progress
+        if (clickCount >= 10 && !isPanelActive)
+        {
+            AchievementManager achievementManager = FindObjectOfType<AchievementManager>();
+
+            if (achievementManager != null)
+            {
+                achievementManager.achievements[0].isAchieved = () => clickCount >= 10;
+            }
+            else
+            {
+                Debug.LogError("AchievementManager not found in the scene.");
+            }
+        }
     }
 
     void ShowPanel()
     {
-        panel.SetActive(true); // Show the panel when the click count reaches 10
+        panel.SetActive(true);
         isPanelActive = true;
     }
 
     void ChangeScene()
     {
-        // Change scene when the timer expires
         SceneManager.LoadScene("Rey'sTestingMenuArea");
     }
 }
