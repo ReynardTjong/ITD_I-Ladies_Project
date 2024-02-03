@@ -257,14 +257,20 @@ public class UiManager : MonoBehaviour
 
     public void BookScreen()
     {
-        playContents.SetActive(false);
-        achievementsContents.SetActive(false);
-        bookContents.SetActive(true);
-        volumeContents.SetActive(false);
-        howToPlayContents.SetActive(false);
-        statusContents.SetActive(false);
+        if (PersistentManager.Instance != null && PersistentManager.Instance.achievement1Unlocked) // checks my persistent manager for achievement
+        {
+            playContents.SetActive(false);
+            achievementsContents.SetActive(false);
+            bookContents.SetActive(true);
+            volumeContents.SetActive(false);
+            howToPlayContents.SetActive(false);
+            statusContents.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("Achievement 1 not unlocked. Unable to access the book screen."); //ukuk
+        }
     }
-
     public void BackToBookScreen()
     {
         gardeningBtn.SetActive(true);
