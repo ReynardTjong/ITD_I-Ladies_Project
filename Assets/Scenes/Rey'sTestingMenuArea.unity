@@ -11745,7 +11745,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1527065709}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: BackToCampaignMissionsScreen
+        m_MethodName: BackToCampaignChaptersScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17331,7 +17331,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1527065709}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: BackToCampaignMissionsScreen
+        m_MethodName: BackToCampaignChaptersScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32265,7 +32265,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1527065709}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: BackToCampaignMissionsScreen
+        m_MethodName: BackToCampaignChaptersScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

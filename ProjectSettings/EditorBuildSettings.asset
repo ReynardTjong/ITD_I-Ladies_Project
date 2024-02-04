@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rey'sTestingGameArea.unity
     guid: 791a6d00962fc524f810265222f67120
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MengChoon'sGameMechTestingArea.unity
     guid: a8260835d4dad67418ef5aac1bb9976d
   - enabled: 0
