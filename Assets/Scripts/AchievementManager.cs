@@ -14,9 +14,8 @@ public class AchievementManager : MonoBehaviour
     }
 
     public List<Achievement> achievements = new List<Achievement>();
-    private PersistentManager persistentManager; // No need to make it public anymore
+    private PersistentManager persistentManager;
 
-    // Ensure that only one instance of AchievementManager exists
     private static AchievementManager _instance;
 
     void Awake()
@@ -26,15 +25,14 @@ public class AchievementManager : MonoBehaviour
 
     void Start()
     {
-        // Ensure only one instance of AchievementManager exists
         if (_instance != null && _instance != this)
         {
-            Destroy(gameObject); // Destroy duplicate instances
+            Destroy(gameObject);
         }
         else
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject); // Persist across scenes
+            DontDestroyOnLoad(gameObject);
 
             Debug.Log("AchievementManager Started.");
 
@@ -45,7 +43,14 @@ public class AchievementManager : MonoBehaviour
                 isAchieved = () => false,
                 isCompleted = false
             });
-            // Add more achievements as needed
+
+            // Add a new achievement for Chapter 1 Finish
+            achievements.Add(new Achievement
+            {
+                name = "Chapter 1 Finish",
+                isAchieved = () => false,
+                isCompleted = false
+            });
 
             // Find the PersistentManager in the scene
             persistentManager = FindObjectOfType<PersistentManager>();
@@ -127,7 +132,9 @@ public class AchievementManager : MonoBehaviour
             {
                 case "Clicker Pro":
                     persistentManager.achievement1Unlocked = true;
-                    // Add more cases for other achievements as needed
+                    break;
+                case "Chapter 1 Finish":
+                    persistentManager.chapter1FinishAchievementUnlocked = true;
                     break;
                 default:
                     Debug.LogWarning("Unexpected achievement name: " + achievementName);

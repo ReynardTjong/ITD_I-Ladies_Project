@@ -282,12 +282,19 @@ public class UiManager : MonoBehaviour
 
     public void GardeningBookScreen()
     {
-        gardeningBtn.SetActive(false);
-        cookingBtn.SetActive(false);
+        if (PersistentManager.Instance != null && PersistentManager.Instance.chapter1FinishAchievementUnlocked) //checks achievement
+        {
+            gardeningBtn.SetActive(false);
+            cookingBtn.SetActive(false);
 
-        gardeningContents.SetActive(true);
+            gardeningContents.SetActive(true);
 
-        GardeningSkillOneScreen();
+            GardeningSkillOneScreen();
+        }
+        else
+        {
+            Debug.Log("Chapter 1 Finish achievement not unlocked. Unable to access the Gardening Book Screen.");
+        }
     }
 
     public void GardeningSkillOneScreen()
@@ -324,12 +331,19 @@ public class UiManager : MonoBehaviour
 
     public void CookingBookScreen()
     {
-        gardeningBtn.SetActive(false);
-        cookingBtn.SetActive(false);
+        if (PersistentManager.Instance != null && PersistentManager.Instance.chapter1FinishAchievementUnlocked) //check achievement
+        {
+            gardeningBtn.SetActive(false);
+            cookingBtn.SetActive(false);
 
-        cookingContents.SetActive(true);
+            cookingContents.SetActive(true);
 
-        CookingRecipeOneScreen();
+            CookingRecipeOneScreen();
+        }
+        else
+        {
+            Debug.Log("Chapter 1 Finish achievement not unlocked. Unable to access the Cooking Book Screen.");
+        }
     }
 
     public void CookingRecipeOneScreen()
