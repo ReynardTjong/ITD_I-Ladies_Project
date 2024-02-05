@@ -3846,7 +3846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &780781296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4618,7 +4618,7 @@ GameObject:
   - component: {fileID: 879330214}
   - component: {fileID: 879330213}
   m_Layer: 5
-  m_Name: TutorialGuidance
+  m_Name: TutorialWalkthrough
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11926,7 +11926,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a117f0c2f329a6344a0729f5cd76c10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firebaseManager: {fileID: 0}
   gameMenu: {fileID: 1514684763}
   gameMenuBtn: {fileID: 2108033944}
   gameMenuContents: {fileID: 694004090}
@@ -12807,8 +12806,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 797185233}
-  - {fileID: 516137492}
   - {fileID: 1747365304}
+  - {fileID: 516137492}
   - {fileID: 1786084485}
   - {fileID: 165096222}
   - {fileID: 879330216}

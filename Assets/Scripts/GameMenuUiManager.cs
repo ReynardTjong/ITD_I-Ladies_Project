@@ -6,9 +6,6 @@ public class GameMenuUiManager : MonoBehaviour
 {
     public static GameMenuUiManager instance;
 
-    [Header("Firebase Script Reference")]
-    public FirebaseManager firebaseManager;
-
     [Header("Game Menu")]
     [SerializeField] private GameObject gameMenu;
     [SerializeField] private GameObject gameMenuBtn;
@@ -34,11 +31,6 @@ public class GameMenuUiManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
-    }
-
-    private void Start()
-    {
-        firebaseManager = FirebaseManager.instance;
     }
 
     public void BackToGameMenuScreen()
