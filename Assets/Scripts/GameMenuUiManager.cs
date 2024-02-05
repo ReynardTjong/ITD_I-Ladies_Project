@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameUiManager : MonoBehaviour
+public class GameMenuUiManager : MonoBehaviour
 {
-    public static GameUiManager instance;
+    public static GameMenuUiManager instance;
 
     [Header("Firebase Script Reference")]
     public FirebaseManager firebaseManager;
