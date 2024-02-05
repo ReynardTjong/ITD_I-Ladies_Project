@@ -1543,7 +1543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &102156855
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1583,9 +1583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HI!
-
-    Welcome To East Eats!'
+  m_text: 'Look at the '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -4821,7 +4819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &648875834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4861,7 +4859,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the left controller
+  m_text: Use the left controller joystick to walk around!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -5447,7 +5445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &780781296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6780,9 +6778,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HI!
-
-    Welcome To East Eats!'
+  m_text: Use the right controller joystick to look around!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
