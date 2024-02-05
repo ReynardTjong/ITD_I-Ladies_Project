@@ -23,7 +23,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Counter
-    second: {fileID: 2100000, guid: ae20f4e038f2ea74ca836f995fb1bb01, type: 2}
+    second: {fileID: 2100000, guid: 4cc2f9b773e47c74d98b509a376834d9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -33,7 +33,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cutlery
-    second: {fileID: 2100000, guid: b8db7510728144d41b0bd06e264bc09f, type: 2}
+    second: {fileID: 2100000, guid: 837b3ba5ea2491248a363a9913d650b6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -43,17 +43,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Knife2
-    second: {fileID: 2100000, guid: ccfd022d98b29bc4a86c894783c418ca, type: 2}
+    second: {fileID: 2100000, guid: a363ac745268bf94e8330253174bcc22, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Knobs1
-    second: {fileID: 2100000, guid: 10f44d6744733b947a314b85e83e9aea, type: 2}
+    second: {fileID: 2100000, guid: cd264eddb5b684a4d940adc29fff7f7b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Oven1
-    second: {fileID: 2100000, guid: 85576f091cc667d4496dedc368dda869, type: 2}
+    second: {fileID: 2100000, guid: 3de2aeb72836a7c4c867765ac263ebb2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

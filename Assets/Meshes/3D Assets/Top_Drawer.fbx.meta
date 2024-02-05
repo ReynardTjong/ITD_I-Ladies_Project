@@ -23,12 +23,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Spatula1
-    second: {fileID: 2100000, guid: 6718f68ddfbf95e428aefeb90e7fd049, type: 2}
+    second: {fileID: 2100000, guid: 06b7e1a8d0113ea4785e12c6a7764943, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wood
-    second: {fileID: 2100000, guid: 25306826b24e7d74693f6c7e52d1a9e6, type: 2}
+    second: {fileID: 2100000, guid: 29ef98e6ce9b7b345a076c6bf7812750, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
