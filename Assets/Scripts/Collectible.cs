@@ -5,7 +5,7 @@ public class Collectible : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the collected object has the tag "chapter1finish"
-        if (other.CompareTag("chapter1finish"))
+        if (other.CompareTag("Player"))
         {
             // Update AchievementManager directly
             AchievementManager achievementManager = FindObjectOfType<AchievementManager>();
