@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class QuestFinalTrigger : MonoBehaviour
 {
-    public GameObject uiCanvas; // Reference to your UI Canvas object
+    [Header("Tutorial UI Completion")]
+    [SerializeField] private GameObject tutorialUICompletion;
 
     private void Start()
     {
-        uiCanvas.SetActive(false);
+        tutorialUICompletion.SetActive(false);
+        QuestFinalAreaManager.Instance.SetTutorialUICompletion(tutorialUICompletion);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Replace with your specific collider tag
+        if (other.CompareTag("GrabbableObject"))
         {
-            uiCanvas.SetActive(true); // Activate the UI Canvas
+            QuestFinalAreaManager.Instance.SetTriggerAreaOccupied(transform.GetSiblingIndex() + 1, true);
+        }
+    }
 
-            Debug.Log("Tutorial Completed" + " Achievement Unlocked");
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("GrabbableObject"))
+        {
+            QuestFinalAreaManager.Instance.SetTriggerAreaOccupied(transform.GetSiblingIndex() + 1, false);
         }
     }
 }
