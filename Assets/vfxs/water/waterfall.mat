@@ -54,7 +54,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _erosion: 0
-    - _rippleAmount: 1.85
+    - _rippleAmount: 2.82
     - _vertexOffset: 0.19
     - _voronoiScale: 10
     - _voronoiSpeed: 6.8
