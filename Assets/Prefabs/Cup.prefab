@@ -25,9 +25,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3840149931459324550}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: 1946.6726, y: 203.63087, z: 5800.303}
-  m_LocalScale: {x: 862.1147, y: 862.1148, z: 862.1147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372377782256865475}
@@ -67,12 +67,12 @@ GameObject:
   - component: {fileID: 372377782256865475}
   - component: {fileID: 7856569408497514190}
   - component: {fileID: 1789417814316645588}
-  - component: {fileID: 3266378010683336869}
+  - component: {fileID: 9003579159477037179}
   - component: {fileID: 8589227379281837776}
   - component: {fileID: 7946036498673264522}
   - component: {fileID: 2303536804519557426}
   - component: {fileID: 2421157698994177175}
-  - component: {fileID: 5828334965083828290}
+  - component: {fileID: 8680133324271039711}
   m_Layer: 0
   m_Name: Cup
   m_TagString: Untagged
@@ -90,7 +90,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 22.924408, y: -35.659866, z: 32.841377}
-  m_LocalScale: {x: 0.00057996914, y: 0.00057996914, z: 0.00057996914}
+  m_LocalScale: {x: 0.000518452, y: 0.000518452, z: 0.000518452}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2701820656351889724}
@@ -147,8 +147,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3266378010683336869
-MeshCollider:
+--- !u!65 &9003579159477037179
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,10 +165,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4119317738140548247, guid: a220841ec1e96c145ab5242301e22bb3, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 200.00005, y: 200, z: 200.00005}
+  m_Center: {x: 0.0004882814, y: 0, z: 0}
 --- !u!54 &8589227379281837776
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208,10 +207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
+  _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 5828334965083828290}
+  _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
@@ -260,7 +259,7 @@ MonoBehaviour:
   _resetGrabOnGrabsUpdated: 1
   _physicsGrabbable: {fileID: 0}
   _movementProvider: {fileID: 0}
---- !u!114 &5828334965083828290
+--- !u!114 &8680133324271039711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
