@@ -3,7 +3,17 @@ guid: 0c8472f2196fa45fa9ef2b0aa8a8cf1b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Basket_Colour
+    second: {fileID: 2100000, guid: e24baaa35ba4c4d62b6de2299f5fbeb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle_Colour
+    second: {fileID: 2100000, guid: 91c469b1234144f54a824e8ff6c76e6d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
