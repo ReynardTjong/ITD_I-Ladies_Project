@@ -60,5 +60,5 @@ Material:
     - _voronoiSpeed: 6.99
     m_Colors:
     - _Color: {r: 2.038602, g: 2.7613177, b: 2.828427, a: 0}
-    - _rippleSpeed: {r: 0, g: 0.4, b: 0, a: 0}
+    - _rippleSpeed: {r: 0, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
