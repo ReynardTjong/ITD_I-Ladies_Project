@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerUiCanvas : MonoBehaviour
+public class QuestFinalTrigger : MonoBehaviour
 {
     public GameObject uiCanvas; // Reference to your UI Canvas object
 
@@ -17,7 +17,7 @@ public class TriggerUiCanvas : MonoBehaviour
         {
             uiCanvas.SetActive(true); // Activate the UI Canvas
 
-            Debug.Log("Object implemented");
+            Debug.Log("Tutorial Completed" + " Achievement Unlocked");
         }
     }
 }
