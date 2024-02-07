@@ -317,34 +317,4 @@ public class FirebaseManager : MonoBehaviour
             Debug.LogError("Error fetching player data: " + ex.Message);
         }
     }
-
-    public void UpdateAchievementData(string achievementName)
-    {
-        // Update the achievement data in the Firebase Realtime Database
-        try
-        {
-            string userId = auth.CurrentUser.UserId; // Get the current user's ID
-            DatabaseReference playerDataRef = DBreference.Child("Players").Child(userId);
-
-            // Update the specific achievement data based on its name
-            switch (achievementName)
-            {
-                case "Clicker Pro":
-                    playerDataRef.Child("ClickerProAchievementUnlocked").SetValueAsync(true);
-                    break;
-                case "Chapter 1 Finish":
-                    playerDataRef.Child("Chapter1FinishAchievementUnlocked").SetValueAsync(true);
-                    break;
-                default:
-                    Debug.LogWarning("Unexpected achievement name: " + achievementName);
-                    break;
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError("Error updating achievement data: " + ex.Message);
-        }
-    }
-
-
 }
