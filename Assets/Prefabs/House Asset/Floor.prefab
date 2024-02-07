@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2a101938ab9934599b9f81af9d2dcbb2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.87398
+      value: 27.764826
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a101938ab9934599b9f81af9d2dcbb2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9959736
+      value: -3.400889
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a101938ab9934599b9f81af9d2dcbb2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 133.3524
+      value: -16.66742
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a101938ab9934599b9f81af9d2dcbb2,
         type: 3}
@@ -31,12 +31,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2a101938ab9934599b9f81af9d2dcbb2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a101938ab9934599b9f81af9d2dcbb2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a101938ab9934599b9f81af9d2dcbb2,
         type: 3}
@@ -62,6 +62,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a101938ab9934599b9f81af9d2dcbb2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
