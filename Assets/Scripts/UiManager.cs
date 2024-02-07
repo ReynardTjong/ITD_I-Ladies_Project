@@ -23,7 +23,6 @@ public class UiManager : MonoBehaviour
 
     [Header("Play Buttons")]
     public GameObject campaignBtn;
-    public GameObject freeRoamBtn;
     public GameObject tutorialBtn;
 
     [Header("Play (Campaign)")]
@@ -31,14 +30,8 @@ public class UiManager : MonoBehaviour
     public GameObject chapterBtns;
     public GameObject chapter1Contents;
     public GameObject chapter2Contents;
-    public GameObject chapter3Contents;
     public GameObject chapter1ReturnBtn;
     public GameObject chapter2ReturnBtn;
-    public GameObject chapter3ReturnBtn;
-
-    [Header("Play (FreeRoam)")]
-    public GameObject freeRoamContents;
-    public GameObject freeRoamReturnBtn;
 
     [Header("Play (Tutorial)")]
     public GameObject tutorialContents;
@@ -80,10 +73,8 @@ public class UiManager : MonoBehaviour
     public GameObject creditsBtn;
 
     [Header("How To Play (Instructions)")]
-    public GameObject instructionsContents;
     public GameObject instructionsBtns;
     public GameObject campaignInstructionsContents;
-    public GameObject freeRoamInstructionsContents;
 
     [Header("How To Play (VR Controller Bindings)")]
     public GameObject vrControllerBindingsContents;
@@ -165,18 +156,15 @@ public class UiManager : MonoBehaviour
     public void BackToPlayContentsScreen()
     {
         campaignBtn.SetActive(true);
-        freeRoamBtn.SetActive(true);
         tutorialBtn.SetActive(true);
 
         chapterContents.SetActive(false);
-        freeRoamContents.SetActive(false);
         tutorialContents.SetActive(false);
     }
 
     public void CampaignChaptersScreen()
     {
         campaignBtn.SetActive(false);
-        freeRoamBtn.SetActive(false);
         tutorialBtn.SetActive(false);
 
         chapterContents.SetActive(true);
@@ -189,11 +177,9 @@ public class UiManager : MonoBehaviour
 
         chapter1Contents.SetActive(false);
         chapter2Contents.SetActive(false);
-        chapter3Contents.SetActive(false);
 
         chapter1ReturnBtn.SetActive(false);
         chapter2ReturnBtn.SetActive(false);
-        chapter3ReturnBtn.SetActive(false);
     }
 
     public void Chapter1Screen()
@@ -212,28 +198,9 @@ public class UiManager : MonoBehaviour
         chapter2ReturnBtn.SetActive(true);
     }
 
-    public void Chapter3Screen()
-    {
-        chapterBtns.SetActive(false);
-        returnToPlayContents.SetActive(false);
-        chapter3Contents.SetActive(true);
-        chapter3ReturnBtn.SetActive(true);
-    }
-
-    public void FreeRoamScreen()
-    {
-        campaignBtn.SetActive(false);
-        freeRoamBtn.SetActive(false);
-        tutorialBtn.SetActive(false);
-
-        freeRoamContents.SetActive(true);
-        freeRoamReturnBtn.SetActive(true);
-    }
-
     public void TutorialScreen()
     {
         campaignBtn.SetActive(false);
-        freeRoamBtn.SetActive(false);
         tutorialBtn.SetActive(false);
 
         tutorialContents.SetActive(true);
@@ -408,40 +375,18 @@ public class UiManager : MonoBehaviour
         vrControllerBindingsBtn.SetActive(true);
         creditsBtn.SetActive(true);
 
-        instructionsContents.SetActive(false);
+        campaignInstructionsContents.SetActive(false);
         vrControllerBindingsContents.SetActive(false);
         creditsContents.SetActive(false);
     }
 
-    public void InstructionsScreen()
+    public void CampaignInstructionsScreen()
     {
         instructionsBtn.SetActive(false);
         vrControllerBindingsBtn.SetActive(false);
         creditsBtn.SetActive(false);
 
-        instructionsContents.SetActive(true);
-    }
-
-    public void BackToInstructionsScreen()
-    {
-        instructionsBtns.SetActive(true);
-
-        campaignInstructionsContents.SetActive(false);
-        freeRoamInstructionsContents.SetActive(false);
-    }
-
-    public void CampaignInstructionsScreen()
-    {
-        instructionsBtns.SetActive(false);
-
         campaignInstructionsContents.SetActive(true);
-    }
-
-    public void FreeRoamInstructionsScreen()
-    {
-        instructionsBtns.SetActive(false);
-
-        freeRoamInstructionsContents.SetActive(true);
     }
 
     public void VRControllerBindingsScreen()
