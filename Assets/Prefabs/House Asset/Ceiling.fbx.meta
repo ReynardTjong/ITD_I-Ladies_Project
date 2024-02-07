@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8aed60fc4fa6245f6badff1a6bddab68
+guid: e07ccfb1231f94e5790993fc238c563b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,23 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ExteriorHouseColour
-    second: {fileID: 2100000, guid: e4240ef95b85c4969bc5f8d19dcb6a18, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Window10
-    second: {fileID: 2100000, guid: d40e4e81d5f4a4127baeba2ce7783d96, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert17
-    second: {fileID: 2100000, guid: aa0a22281f05d48bf97399745e9d6f01, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert51
-    second: {fileID: 2100000, guid: d13bf9593ad1444c5aeaa64f991ce66c, type: 2}
+      name: Ceiling1
+    second: {fileID: 2100000, guid: 4b3b785e9064a49e692d095bb2efc69d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
