@@ -56,9 +56,6 @@ public class clicker : MonoBehaviour
             if (achievementManager != null)
             {
                 achievementManager.achievements[0].isAchieved = () => clickCount >= 10;
-
-                // Update the achievement data in Firebase
-                FirebaseManager.instance.UpdateAchievementData("ClickerPro");
             }
             else
             {
