@@ -222,19 +222,12 @@ public class UiManager : MonoBehaviour
 
     public void BookScreen()
     {
-        if (PersistentManager.Instance != null && PersistentManager.Instance.achievement1Unlocked) // checks my persistent manager for achievement
-        {
-            playContents.SetActive(false);
-            achievementsContents.SetActive(false);
-            bookContents.SetActive(true);
-            volumeContents.SetActive(false);
-            howToPlayContents.SetActive(false);
-            statusContents.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Achievement 1 not unlocked. Unable to access the book screen."); //ukuk
-        }
+        playContents.SetActive(false);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(true);
+        volumeContents.SetActive(false);
+        howToPlayContents.SetActive(false);
+        statusContents.SetActive(false);
     }
     public void BackToBookScreen()
     {
@@ -247,19 +240,12 @@ public class UiManager : MonoBehaviour
 
     public void GardeningBookScreen()
     {
-        if (PersistentManager.Instance != null && PersistentManager.Instance.chapter1FinishAchievementUnlocked) //checks achievement
-        {
-            gardeningBtn.SetActive(false);
-            cookingBtn.SetActive(false);
+        gardeningBtn.SetActive(false);
+        cookingBtn.SetActive(false);
 
-            gardeningContents.SetActive(true);
+        gardeningContents.SetActive(true);
 
-            GardeningSkillOneScreen();
-        }
-        else
-        {
-            Debug.Log("Chapter 1 Finish achievement not unlocked. Unable to access the Gardening Book Screen.");
-        }
+        GardeningSkillOneScreen();
     }
 
     public void GardeningSkillOneScreen()
@@ -295,20 +281,13 @@ public class UiManager : MonoBehaviour
     }
 
     public void CookingBookScreen()
-    {
-        if (PersistentManager.Instance != null && PersistentManager.Instance.chapter1FinishAchievementUnlocked) //check achievement
-        {
-            gardeningBtn.SetActive(false);
-            cookingBtn.SetActive(false);
+    {       
+        gardeningBtn.SetActive(false);
+        cookingBtn.SetActive(false);
 
-            cookingContents.SetActive(true);
+        cookingContents.SetActive(true);
 
-            CookingRecipeOneScreen();
-        }
-        else
-        {
-            Debug.Log("Chapter 1 Finish achievement not unlocked. Unable to access the Cooking Book Screen.");
-        }
+        CookingRecipeOneScreen();
     }
 
     public void CookingRecipeOneScreen()

@@ -16,7 +16,7 @@ public class AchievementManager : MonoBehaviour
     public List<Achievement> achievements = new List<Achievement>();
     private PersistentManager persistentManager;
 
-    private static AchievementManager _instance;
+    public static AchievementManager Instance;
 
     void Awake()
     {
@@ -25,13 +25,13 @@ public class AchievementManager : MonoBehaviour
 
     void Start()
     {
-        if (_instance != null && _instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
         }
         else
         {
-            _instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
 
             Debug.Log("AchievementManager Started.");
@@ -39,15 +39,7 @@ public class AchievementManager : MonoBehaviour
             // Add at least one achievement to the list
             achievements.Add(new Achievement
             {
-                name = "Clicker Pro",
-                isAchieved = () => false,
-                isCompleted = false
-            });
-
-            // Add a new achievement for Chapter 1 Finish
-            achievements.Add(new Achievement
-            {
-                name = "Chapter 1 Finish",
+                name = "Master of Basics",
                 isAchieved = () => false,
                 isCompleted = false
             });
@@ -121,6 +113,27 @@ public class AchievementManager : MonoBehaviour
         Update();
     }
 
+    public void UnlockAchievement(string achievementName)
+    {
+        Debug.Log("Unlocking Achievement: " + achievementName);
+
+        // Find the achievement by name
+        Achievement achievement = achievements.Find(a => a.name == achievementName);
+
+        if (achievement != null)
+        {
+            // Mark the achievement as completed
+            achievement.isCompleted = true;
+
+            // Update persistent data
+            UpdatePersistentData(achievementName);
+        }
+        else
+        {
+            Debug.LogWarning("Achievement not found: " + achievementName);
+        }
+    }
+
     void UpdatePersistentData(string achievementName)
     {
         Debug.Log("Updating Persistent Data for Achievement: " + achievementName);
@@ -130,11 +143,8 @@ public class AchievementManager : MonoBehaviour
             // Update persistent data based on the unlocked achievement
             switch (achievementName)
             {
-                case "Clicker Pro":
+                case "Master of Basics":
                     persistentManager.achievement1Unlocked = true;
-                    break;
-                case "Chapter 1 Finish":
-                    persistentManager.chapter1FinishAchievementUnlocked = true;
                     break;
                 default:
                     Debug.LogWarning("Unexpected achievement name: " + achievementName);
