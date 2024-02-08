@@ -3922,7 +3922,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 290125814}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 202907740}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: TutorialLoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TutorialScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &290125814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10258,52 +10270,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682605136}
   m_CullTransparentMesh: 1
---- !u!1 &690896333
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 690896335}
-  - component: {fileID: 690896334}
-  m_Layer: 0
-  m_Name: Persistent manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &690896334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690896333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a84811745bb9c75489b47889153c8b7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievement1Unlocked: 1
-  chapter1FinishAchievementUnlocked: 1
---- !u!4 &690896335
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690896333}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4476377, y: -0.48889464, z: -1.4774799}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712771242
 GameObject:
   m_ObjectHideFlags: 0
@@ -14499,7 +14465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &948017765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18819,6 +18785,52 @@ RectTransform:
   m_AnchoredPosition: {x: 861.99994, y: 201}
   m_SizeDelta: {x: 400, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1313410548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1313410550}
+  - component: {fileID: 1313410549}
+  m_Layer: 0
+  m_Name: PersistantManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1313410549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313410548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84811745bb9c75489b47889153c8b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievement1Unlocked: 0
+  chapter1FinishAchievementUnlocked: 0
+--- !u!4 &1313410550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313410548}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4147696, y: -0.44607183, z: -1.5572023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316591280
 GameObject:
   m_ObjectHideFlags: 0
@@ -19873,7 +19885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1391938385}
   m_Layer: 0
-  m_Name: =====Managers==========
+  m_Name: =======Managers==========
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29119,7 +29131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2110232217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41039,7 +41051,7 @@ SceneRoots:
   - {fileID: 1391938385}
   - {fileID: 974832989}
   - {fileID: 202907741}
-  - {fileID: 690896335}
+  - {fileID: 1313410550}
   - {fileID: 1134353704}
   - {fileID: 543450652744221775}
   - {fileID: 572328871}

@@ -104,8 +104,6 @@ public class UiManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
-
-        
     }
     private void Start()
     {
