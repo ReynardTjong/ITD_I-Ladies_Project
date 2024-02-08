@@ -53,12 +53,12 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _erosion: 0.46
-    - _rippleAmount: 6.06
+    - _erosion: 0.92
+    - _rippleAmount: 0.36
     - _vertexOffset: 0
-    - _voronoiScale: 8.45
+    - _voronoiScale: 8.66
     - _voronoiSpeed: 6.99
     m_Colors:
-    - _Color: {r: 2.038602, g: 2.7613177, b: 2.828427, a: 0}
+    - _Color: {r: 14.698744, g: 54.693893, b: 59.01769, a: 0}
     - _rippleSpeed: {r: 0, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
