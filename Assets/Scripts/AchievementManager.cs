@@ -30,11 +30,13 @@ public class AchievementManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        InitializeAchievements();
     }
 
     void Start()
     {
-        InitializeAchievements();
+        
     }
 
     void InitializeAchievements()
