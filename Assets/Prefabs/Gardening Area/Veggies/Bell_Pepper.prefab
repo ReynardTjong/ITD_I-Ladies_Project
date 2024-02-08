@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316369989197427516}
   - component: {fileID: -860774789918882251}
-  - component: {fileID: -3169646613124201814}
+  - component: {fileID: 2580974555342073012}
   - component: {fileID: -3858012620114159371}
   - component: {fileID: 898364617535357557}
   - component: {fileID: 7589472946997785049}
@@ -405,8 +405,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &-3169646613124201814
-BoxCollider:
+--- !u!64 &2580974555342073012
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -423,9 +423,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!54 &-3858012620114159371
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -487,8 +488,8 @@ MonoBehaviour:
   _interactorFilters: []
   _maxInteractors: -1
   _maxSelectingInteractors: -1
-  _data: {fileID: 898364617535357557}
-  _pointableElement: {fileID: 0}
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 898364617535357557}
   _rigidbody: {fileID: -3858012620114159371}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
@@ -565,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2140d2b457bea84881488302059889b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: -3169646613124201814}
+  _collider: {fileID: 2580974555342073012}
 --- !u!114 &-307208530360611479
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,24 +19,9 @@ public class AchievementManager : MonoBehaviour
     // Singleton instance
     public static AchievementManager instance;
 
-    void Awake()
+    private void Start()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-
         InitializeAchievements();
-    }
-
-    void Start()
-    {
-        
     }
 
     void InitializeAchievements()

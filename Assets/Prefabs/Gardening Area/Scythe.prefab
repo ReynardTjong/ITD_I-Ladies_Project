@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scythe
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 57d8f26a14b7a474f81f61d3caf5331d,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -180,7 +185,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
+  _pointableElement: {fileID: 3703844578152959529}
   _rigidbody: {fileID: -5685108946392896739}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
@@ -203,7 +208,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
+  _pointableElement: {fileID: 3703844578152959529}
   _rigidbody: {fileID: -5685108946392896739}
   _grabSource: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
