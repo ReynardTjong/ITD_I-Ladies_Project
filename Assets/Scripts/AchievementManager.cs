@@ -8,152 +8,69 @@ public class AchievementManager : MonoBehaviour
     [System.Serializable]
     public class Achievement
     {
-        public string name;
-        public Func<bool> isAchieved;
-        public bool isCompleted;
+        public string achievementName;
+        public bool isUnlocked;
+        public GameObject lockedImage;
+        public GameObject unlockedImage;
     }
 
-    public List<Achievement> achievements = new List<Achievement>();
-    private PersistentManager persistentManager;
+    public List<Achievement> achievements;
 
-    public static AchievementManager Instance;
+    // Singleton instance
+    public static AchievementManager instance;
 
     void Awake()
     {
-        Debug.Log("AchievementManager Awake");
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+        InitializeAchievements();
+    }
 
-            Debug.Log("AchievementManager Started.");
-
-            // Add at least one achievement to the list
-            achievements.Add(new Achievement
+    void InitializeAchievements()
+    {
+        foreach (Achievement achievement in achievements)
+        {
+            if (!PlayerPrefs.HasKey(achievement.achievementName))
             {
-                name = "Master of Basics",
-                isAchieved = () => false,
-                isCompleted = false
-            });
-
-            // Find the PersistentManager in the scene
-            persistentManager = FindObjectOfType<PersistentManager>();
-
-            if (persistentManager == null)
-            {
-                Debug.LogError("PersistentManager not found in the scene.");
-            }
-        }
-    }
-
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        // Perform any scene-specific initialization here if needed
-    }
-
-    void Update()
-    {
-        if (achievements == null)
-        {
-            Debug.LogError("Achievements list is not initialized. Make sure to add achievements in the Unity Editor or via script.");
-            return;
-        }
-
-        foreach (var achievement in achievements)
-        {
-            if (achievement == null)
-            {
-                Debug.LogError("Achievement object is null. Check the Unity Editor to ensure all achievements are properly configured.");
-                continue;
+                PlayerPrefs.SetInt(achievement.achievementName, achievement.isUnlocked ? 1 : 0);
             }
 
-            if (!achievement.isCompleted && achievement.isAchieved != null && achievement.isAchieved())
+            int achievementUnlocked = PlayerPrefs.GetInt(achievement.achievementName);
+            achievement.isUnlocked = achievementUnlocked == 1;
+
+            if (achievement.isUnlocked)
             {
-                achievement.isCompleted = true;
-
-                if (persistentManager == null)
-                {
-                    Debug.LogError("PersistentManager is not assigned. Make sure to assign it in the Unity Editor.");
-                    return;
-                }
-
-                // Update persistent data
-                UpdatePersistentData(achievement.name);
-
-                // Do something when the achievement is unlocked, e.g., show a notification
-                Debug.Log("Achievement Unlocked: " + achievement.name);
-                Debug.Log("AchievementManager Update called.");
+                achievement.unlockedImage.SetActive(true);
+                achievement.lockedImage.SetActive(false);
+            }
+            else
+            {
+                achievement.lockedImage.SetActive(true);
+                achievement.unlockedImage.SetActive(false);
             }
         }
-    }
-
-    public void OnPersistentDataUpdated()
-    {
-        // Handle any logic you need when persistent data is updated
-        // This can include re-evaluating achievement progress, etc.
-        // For example, you might want to call Update() or a specific method in AchievementManager.
-        Update();
     }
 
     public void UnlockAchievement(string achievementName)
     {
-        Debug.Log("Unlocking Achievement: " + achievementName);
-
-        // Find the achievement by name
-        Achievement achievement = achievements.Find(a => a.name == achievementName);
-
+        Achievement achievement = achievements.Find(a => a.achievementName == achievementName);
         if (achievement != null)
         {
-            // Mark the achievement as completed
-            achievement.isCompleted = true;
-
-            // Update persistent data
-            UpdatePersistentData(achievementName);
-        }
-        else
-        {
-            Debug.LogWarning("Achievement not found: " + achievementName);
-        }
-    }
-
-    void UpdatePersistentData(string achievementName)
-    {
-        Debug.Log("Updating Persistent Data for Achievement: " + achievementName);
-
-        if (persistentManager != null)
-        {
-            // Update persistent data based on the unlocked achievement
-            switch (achievementName)
-            {
-                case "Master of Basics":
-                    persistentManager.achievement1Unlocked = true;
-                    break;
-                default:
-                    Debug.LogWarning("Unexpected achievement name: " + achievementName);
-                    break;
-            }
-        }
-        else
-        {
-            Debug.LogError("PersistentManager is not assigned. Make sure to assign it in the Unity Editor.");
+            achievement.isUnlocked = true;
+            PlayerPrefs.SetInt(achievementName, 1);
+            achievement.lockedImage.SetActive(false);
+            achievement.unlockedImage.SetActive(true);
         }
     }
 }

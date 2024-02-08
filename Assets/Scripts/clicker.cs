@@ -55,7 +55,7 @@ public class clicker : MonoBehaviour
 
             if (achievementManager != null)
             {
-                achievementManager.achievements[0].isAchieved = () => clickCount >= 10;
+              //  achievementManager.achievements[0].isAchieved = () => clickCount >= 10;
             }
             else
             {

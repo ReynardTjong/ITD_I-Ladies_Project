@@ -44,7 +44,7 @@ public class PersistentManager : MonoBehaviour
         if (achievementManager != null)
         {
             // Call a method in AchievementManager to inform about the persistent data update
-            achievementManager.OnPersistentDataUpdated();
+            //achievementManager.OnPersistentDataUpdated();
 
             // Add a debug log to check if the Update method is being called
             Debug.Log("PersistentManager Update called.");
