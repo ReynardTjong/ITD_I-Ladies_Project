@@ -8,15 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b85d467bdae0c4843adfc86400e9b288
-  - enabled: 0
-    path: Assets/Scenes/Rey'sTestingGameArea.unity
-    guid: 791a6d00962fc524f810265222f67120
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: 49bfa098863a8d34f8c9a43d3c272b94
   - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Scenes/Rey'sTestingGameArea.unity
+    guid: 791a6d00962fc524f810265222f67120
   - enabled: 0
     path: Assets/Scenes/Rey'sTestingMenuArea.unity
     guid: 67f8a69ef59e73f42a2b4e353eb26c9a
@@ -26,9 +26,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MengChoon'sGameMechTestingArea.unity
     guid: a8260835d4dad67418ef5aac1bb9976d
-  - enabled: 0
-    path: Assets/Samples/Meta XR Interaction SDK OVR Samples/59.0.0/Example Scenes/LocomotionExamples.unity
-    guid: d37ed7e92220d1045a36bc73c7c4cf16
   - enabled: 0
     path: Assets/Scenes/Kara'sTestingArea.unity
     guid: dd265deb542cc484b9fce6b5fbd6fcd8
