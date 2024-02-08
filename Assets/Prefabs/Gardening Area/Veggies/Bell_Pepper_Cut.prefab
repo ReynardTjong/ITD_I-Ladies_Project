@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8850066052705800924}
   - component: {fileID: 1898171454369338156}
   - component: {fileID: 602624957705290961}
+  - component: {fileID: 1469516149779827332}
   m_Layer: 0
   m_Name: pSphere2
   m_TagString: Untagged
@@ -83,6 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1469516149779827332
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832315670495416678}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6590731582013008299, guid: d60b41bdebed74aaebf2eac16982df15, type: 3}
 --- !u!1 &2917654959236244762
 GameObject:
   m_ObjectHideFlags: 0

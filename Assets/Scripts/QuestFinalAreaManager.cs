@@ -67,6 +67,16 @@ public class QuestFinalAreaManager : MonoBehaviour
     private IEnumerator CompleteTutorialCoroutine()
     {
         yield return new WaitForSeconds(3f);
+
+        // Check if the tutorial has been completed
+        if (PlayerPrefs.GetInt("TutorialCompleted", 0) == 0)
+        {
+            // Tutorial not completed, don't unlock achievement
+            Debug.LogWarning("Tutorial not completed yet, cannot unlock achievement.");
+            yield break;
+        }
+
+        // Tutorial completed, proceed to unlock achievement and save progress
         SceneManager.LoadScene("MainMenu");
         AchievementManager.instance.UnlockAchievement("MasterOfBasics");
         PlayerPrefs.SetInt("TutorialCompleted", 1);

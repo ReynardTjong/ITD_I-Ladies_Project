@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 664712164538957324}
   - component: {fileID: 8307512087890748359}
   - component: {fileID: 5782772870322689171}
+  - component: {fileID: 5892772979001777337}
   m_Layer: 0
   m_Name: Brick39
   m_TagString: Untagged
@@ -83,6 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5892772979001777337
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247044903647935006}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2921116864989688582, guid: 8aed60fc4fa6245f6badff1a6bddab68, type: 3}
 --- !u!1 &1209615973486036820
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +117,7 @@ GameObject:
   - component: {fileID: 2850148401398245865}
   - component: {fileID: 1528128286563490241}
   - component: {fileID: 4793344406433462991}
+  - component: {fileID: 8773839865219837454}
   m_Layer: 0
   m_Name: Brick16
   m_TagString: Untagged
@@ -166,6 +190,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8773839865219837454
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209615973486036820}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7378425800909282623, guid: 8aed60fc4fa6245f6badff1a6bddab68, type: 3}
 --- !u!1 &2486155515270903048
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +223,7 @@ GameObject:
   - component: {fileID: 884787468354094484}
   - component: {fileID: 7357314400585131593}
   - component: {fileID: 4927569939617602045}
+  - component: {fileID: 802418208044549285}
   m_Layer: 0
   m_Name: Wall2
   m_TagString: Untagged
@@ -250,6 +297,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &802418208044549285
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2486155515270903048}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6783441914887117901, guid: 8aed60fc4fa6245f6badff1a6bddab68, type: 3}
 --- !u!1 &3794151866792630227
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +366,7 @@ GameObject:
   - component: {fileID: 2744820825109278805}
   - component: {fileID: 2993268971714102946}
   - component: {fileID: 5387944717219392313}
+  - component: {fileID: 7889012613452944740}
   m_Layer: 0
   m_Name: Brick38
   m_TagString: Untagged
@@ -369,6 +439,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7889012613452944740
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606992702090470891}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 931007997135701051, guid: 8aed60fc4fa6245f6badff1a6bddab68, type: 3}
 --- !u!1 &6493881742568600666
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +472,7 @@ GameObject:
   - component: {fileID: 492158113934485797}
   - component: {fileID: 6876907360661655964}
   - component: {fileID: 326818223535635396}
+  - component: {fileID: 628888244692878523}
   m_Layer: 0
   m_Name: Brick31
   m_TagString: Untagged
@@ -452,6 +545,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &628888244692878523
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493881742568600666}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3819844732455742831, guid: 8aed60fc4fa6245f6badff1a6bddab68, type: 3}
 --- !u!1 &7797077349922373842
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +611,7 @@ GameObject:
   - component: {fileID: 1625916584815450761}
   - component: {fileID: 7672055992046811210}
   - component: {fileID: 6019885944013551029}
+  - component: {fileID: 2485091881098132793}
   m_Layer: 0
   m_Name: Brick37
   m_TagString: Untagged
@@ -568,3 +684,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2485091881098132793
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488438825489452087}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -596558259645558816, guid: 8aed60fc4fa6245f6badff1a6bddab68, type: 3}
