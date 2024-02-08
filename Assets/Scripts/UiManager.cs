@@ -461,7 +461,12 @@ public class UiManager : MonoBehaviour
     }
     #endregion
 
-    public void LoadScene(string sceneName)
+    public void TutorialLoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void GameLoadSceneChapter(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
