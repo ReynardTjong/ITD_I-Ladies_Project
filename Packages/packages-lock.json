@@ -152,6 +152,16 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.feature.gameplay-storytelling": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.cinemachine": "2.9.5",
+        "com.unity.timeline": "1.7.5",
+        "com.unity.visualscripting": "1.9.0"
+      }
+    },
     "com.unity.ide.rider": {
       "version": "3.0.24",
       "depth": 0,
