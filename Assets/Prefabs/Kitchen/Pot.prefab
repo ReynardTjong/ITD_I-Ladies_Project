@@ -101,23 +101,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5167670728380655080, guid: 7d6eab4d8d1440e4f8682515f31f6d10,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 506958420860428346}
-    - targetCorrespondingSourceObject: {fileID: 5167670728380655080, guid: 7d6eab4d8d1440e4f8682515f31f6d10,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8237849221814485287}
-    - targetCorrespondingSourceObject: {fileID: 5167670728380655080, guid: 7d6eab4d8d1440e4f8682515f31f6d10,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8902639048163411205}
-    - targetCorrespondingSourceObject: {fileID: 5167670728380655080, guid: 7d6eab4d8d1440e4f8682515f31f6d10,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6916359619097974063}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6eab4d8d1440e4f8682515f31f6d10, type: 3}
 --- !u!4 &2116543148378282049 stripped
 Transform:
@@ -125,103 +109,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1770079035440289217}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6856682761799397417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5167670728380655080, guid: 7d6eab4d8d1440e4f8682515f31f6d10,
-    type: 3}
-  m_PrefabInstance: {fileID: 1770079035440289217}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &506958420860428346
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6856682761799397417}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &8237849221814485287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6856682761799397417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
---- !u!114 &8902639048163411205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6856682761799397417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1bc992571301d4a9602ac95ef4c71a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactorFilters: []
-  _maxInteractors: -1
-  _maxSelectingInteractors: -1
-  _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
-  _grabSource: {fileID: 0}
-  _useClosestPointAsGrabSource: 0
-  _releaseDistance: 0
-  _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 0}
---- !u!114 &6916359619097974063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6856682761799397417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07525681efbca7a4e9643ab3a592ada7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactorFilters: []
-  _maxInteractors: -1
-  _maxSelectingInteractors: -1
-  _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 506958420860428346}
-  _grabSource: {fileID: 0}
-  _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 0}
-  _movementProvider: {fileID: 0}
 --- !u!1001 &3274680727826112738
 PrefabInstance:
   m_ObjectHideFlags: 0
