@@ -5900,6 +5900,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8589227379281837776, guid: 701ab23590ba5a74796707c2834740fb,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20963,6 +20968,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 507315997}
     m_Modifications:
+    - target: {fileID: -8008801281912602346, guid: 0bad0fc37130083468a2278a05ed7836,
+        type: 3}
+      propertyPath: _collider
+      value: 
+      objectReference: {fileID: 1653671484}
     - target: {fileID: 6293124660142664296, guid: 0bad0fc37130083468a2278a05ed7836,
         type: 3}
       propertyPath: m_Convex
@@ -38048,6 +38058,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5619149445865438878, guid: 798b0f87bf6c2cb4cb6459ef8e3b1ad5,
     type: 3}
   m_PrefabInstance: {fileID: 1651559359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1653671484 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 6293124660142664296, guid: 0bad0fc37130083468a2278a05ed7836,
+    type: 3}
+  m_PrefabInstance: {fileID: 867460636}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1655180305
 PrefabInstance:
@@ -67912,6 +67928,11 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 3012185185291878012}
+    - target: {fileID: -8008801281912602346, guid: 0bad0fc37130083468a2278a05ed7836,
+        type: 3}
+      propertyPath: _collider
+      value: 
+      objectReference: {fileID: 7318378298129107942}
     - target: {fileID: -1352368433606444311, guid: 0bad0fc37130083468a2278a05ed7836,
         type: 3}
       propertyPath: _pointableElement
@@ -104714,6 +104735,12 @@ MeshFilter:
 --- !u!4 &7318378298129107934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9168140526837152651, guid: 0bad0fc37130083468a2278a05ed7836,
+    type: 3}
+  m_PrefabInstance: {fileID: 1921873149294833749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7318378298129107942 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 6293124660142664296, guid: 0bad0fc37130083468a2278a05ed7836,
     type: 3}
   m_PrefabInstance: {fileID: 1921873149294833749}
   m_PrefabAsset: {fileID: 0}
