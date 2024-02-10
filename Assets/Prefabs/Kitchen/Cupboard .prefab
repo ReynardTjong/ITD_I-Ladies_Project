@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100633408810401258}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3192.5408, y: 0.962204, z: -684.01904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46,6 +46,9 @@ GameObject:
   - component: {fileID: 2236289028687436478}
   - component: {fileID: 8851363022149281043}
   - component: {fileID: 8197850930193049616}
+  - component: {fileID: 7066743949298224136}
+  - component: {fileID: 4138656635267983981}
+  - component: {fileID: 3632064191717104363}
   m_Layer: 0
   m_Name: CupboardPlace
   m_TagString: Untagged
@@ -137,8 +140,71 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 99.99999, y: 100, z: 100}
-  m_Center: {x: -0.000034332275, y: -0.0000019073486, z: -0.001953125}
+  m_Size: {x: 99.99999, y: 1.1859298, z: 100.00001}
+  m_Center: {x: -0.000034485543, y: 49.406857, z: -0.0019545485}
+--- !u!65 &7066743949298224136
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847490577013912919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 99.99999, y: 3.3450007, z: 100.00001}
+  m_Center: {x: -0.000034485543, y: 18.360931, z: -0.0019545485}
+--- !u!65 &4138656635267983981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847490577013912919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 99.99999, y: 2.6257725, z: 100.00001}
+  m_Center: {x: -0.000034485543, y: -12.5951395, z: -0.0019545485}
+--- !u!65 &3632064191717104363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847490577013912919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 99.99999, y: 4.4032545, z: 100.00001}
+  m_Center: {x: -0.000034485543, y: -47.79823, z: -0.0019545485}
 --- !u!1001 &5289876161190300672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,6 +213,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699564778055743516}
     m_Modifications:
+    - target: {fileID: 1410262190766477810, guid: f2714e726e653dc4f93e3a5c72804679,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738798566945382322, guid: f2714e726e653dc4f93e3a5c72804679,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5294512723775227818, guid: f2714e726e653dc4f93e3a5c72804679,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,6 +277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CupboardHinge1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8843712051543486565, guid: f2714e726e653dc4f93e3a5c72804679,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -275,6 +356,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CupboardHinge2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390174937209813480, guid: 844d4b6a8ad7a4c41be80ee80042d4fe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885613640094267948, guid: 844d4b6a8ad7a4c41be80ee80042d4fe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493400993576094555, guid: 844d4b6a8ad7a4c41be80ee80042d4fe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
