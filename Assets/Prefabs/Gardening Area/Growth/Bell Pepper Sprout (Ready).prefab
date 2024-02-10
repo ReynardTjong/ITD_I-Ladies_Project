@@ -19941,7 +19941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4049581853729514342}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.598999, y: 0.049999952, z: 0}
   m_LocalScale: {x: 1.2917, y: 1.2917, z: 1.2917}
   m_ConstrainProportionsScale: 0
@@ -40094,7 +40094,7 @@ GameObject:
   - component: {fileID: 111321275317205462}
   m_Layer: 0
   m_Name: Bell Peppers (Ready)
-  m_TagString: Untagged
+  m_TagString: Bell Pepper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51839,6 +51839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bell_Pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953491572553881694, guid: 8d050394288c24dcda1f0a7f581fcfec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bell Pepper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
