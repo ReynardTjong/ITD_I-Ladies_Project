@@ -15,14 +15,6 @@ public class CampaignChapter1Manager : MonoBehaviour
     [SerializeField] private GameObject questIntro;
     [SerializeField] private GameObject questGarden;
 
-    public GameObject finalTriggerArea;
-
-    private bool finalTriggerAreaOccupied = false;
-
-    [SerializeField] private GameObject firstTaskCompletionCanvas;
-
-    private Animation anim;
-
     // Start is called before the first frame update
 
     private void Awake()
