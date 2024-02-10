@@ -35,74 +35,11 @@ public class CampaignChapter1Manager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        anim = GetComponent<Animation>();
     }
 
-    public void SetTutorialUICompletion(GameObject firstTaskUI)
-    {
-        firstTaskCompletionCanvas = firstTaskUI;
-    }
+    
 
-    public bool AreasOccupied()
-    {
-        return finalTriggerAreaOccupied;
-    }
-
-    public void SetTriggerAreaOccupied(int areaNumber, bool occupied)
-    {
-        if (areaNumber == 1)
-        {
-            finalTriggerAreaOccupied = occupied;
-        }
-
-        if (AreasOccupied())
-        {
-            SpawnGoodJobUI();
-        }
-    }
-
-    public void ShowWalkthrough1()
-    {
-        chapter1QuestWalkthrough1.SetActive(true);
-        chapter1QuestWalkthrough2.SetActive(false);
-        chapter1QuestWalkthrough3.SetActive(false);
-
-        finalTriggerArea.SetActive(false);
-
-    }
-
-    public void ShowGardenQuest()
-    {
-        questIntro.SetActive(false);
-        questGarden.SetActive(true);
-    }
-
-    public void ShowWalkthrough2()
-    {
-        chapter1QuestWalkthrough1.SetActive(false);
-        chapter1QuestWalkthrough2.SetActive(true);
-        chapter1QuestWalkthrough3.SetActive(false);
-
-        finalTriggerArea.SetActive(false);
-
-        if (anim != null)
-        {
-            // Play the animation clip named "MyAnimation"
-            anim.Play("ArrowGuidance");
-        }
-    }
-
-    public void ShowWalkthrough3()
-    {
-        chapter1QuestWalkthrough1.SetActive(false);
-        chapter1QuestWalkthrough2.SetActive(false);
-        chapter1QuestWalkthrough3.SetActive(true);
-
-        finalTriggerArea.SetActive(true);
-    }
-
-    private void SpawnGoodJobUI()
+    /*private void SpawnGoodJobUI()
     {
         if (firstTaskCompletionCanvas != null)
         {
@@ -113,12 +50,12 @@ public class CampaignChapter1Manager : MonoBehaviour
         {
             Debug.LogError("It's not set!");
         }
-    }
+    }*/
 
-    private IEnumerator CompleteFirstTaskCoroutine()
+   /* private IEnumerator CompleteFirstTaskCoroutine()
     {
         yield return new WaitForSeconds(3f);
 
         SceneManager.LoadScene("MainMenu");
-    }
+    }*/
 }
