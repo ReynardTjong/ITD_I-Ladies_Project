@@ -80,5 +80,18 @@ public class QuestFinalAreaManager : MonoBehaviour
         AchievementManager.instance.UnlockAchievement("MasterOfBasics");
         PlayerPrefs.SetInt("TutorialCompleted", 1);
         PlayerPrefs.Save();
+
+        UpdateFirebaseData();
+    }
+
+    private void UpdateFirebaseData()
+    {
+        if (FirebaseManager.instance != null && FirebaseManager.instance.User != null)
+        {
+            string userId = FirebaseManager.instance.User.UserId;
+
+            // Update player data in Firebase database
+            FirebaseManager.instance.UpdatePlayerDataInDatabase(userId);
+        }
     }
 }

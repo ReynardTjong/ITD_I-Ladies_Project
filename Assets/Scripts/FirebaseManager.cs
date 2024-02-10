@@ -317,4 +317,22 @@ public class FirebaseManager : MonoBehaviour
             Debug.LogError("Error fetching player data: " + ex.Message);
         }
     }
+
+    public async void UpdatePlayerDataInDatabase(string userId)
+    {
+        try
+        {
+            DatabaseReference playerDataRef = FirebaseDatabase.DefaultInstance
+                .GetReference("Players").Child(userId);
+
+            // Update player data fields accordingly (e.g., set tutorial completed flag)
+            await playerDataRef.Child("TutorialCompleted").SetValueAsync(true);
+
+            Debug.Log("Player data updated in Firebase Realtime Database.");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Error updating player data in Firebase Realtime Database: " + ex.Message);
+        }
+    }
 }
