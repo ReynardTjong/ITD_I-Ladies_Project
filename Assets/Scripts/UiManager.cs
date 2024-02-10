@@ -108,6 +108,8 @@ public class UiManager : MonoBehaviour
     private void Start()
     {
         firebaseManager = FirebaseManager.instance;
+        loginPage.SetActive(true);
+        mainMenu.SetActive(false);
     }
 
     #region Login/Sign Up Page Functions
