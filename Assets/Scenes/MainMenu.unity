@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7b10e4e6d34913428426f63165fc688, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7cd499a834e056f45a01812deb2f7205, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -386,13 +386,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly
-    used in the graphic, print, and publishing industries for previewing layouts
-    and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic,
-    print, and publishing industries for previewing layouts and visual mockups.
+  m_text: '1) Prepare the soil by removing weeds, loosening the earth, and adding
+    compost or fertilizer if needed.
+
+
+    2) Plant seeds or seedlings at the appropriate
+    depth and spacing, following the instructions on the seed packet or plant label.
+
+
+    3)
+    Monitor for pests and diseases, and take appropriate measures to protect your
+    crops.
+
+
+    4) Harvest your crops when they reach maturity, following specific
+    guidelines for each type of plant.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -1176,7 +1186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample2
+  m_text: Vegetable salad
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -2019,7 +2029,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7b10e4e6d34913428426f63165fc688, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8657c60077a6b6247884e969fd57333d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3118,7 +3128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.99997, y: -540.99994}
+  m_AnchoredPosition: {x: -89, y: -540.99994}
   m_SizeDelta: {x: 800, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261326516
@@ -3141,10 +3151,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups.
+  m_text: With a chef's precision, chop and slice your garden treasures, infusing
+    each dish with the essence of nature's bounty. From farm to table, savor the
+    satisfaction of creating delectable delights straight from your own backyard.
+    Let your taste buds dance as you indulge in the fruits of your labor, a feast
+    fit for a gardening connoisseur!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db5e570e3e6bcb24099cadc9949f234e, type: 2}
   m_sharedMaterial: {fileID: 6468878349348863595, guid: db5e570e3e6bcb24099cadc9949f234e,
@@ -4649,7 +4660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7b10e4e6d34913428426f63165fc688, type: 3}
+  m_Texture: {fileID: 2800000, guid: b9d4c3b9a3e05ef46835c92afd1792a6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -7047,7 +7058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -358, y: 58}
+  m_AnchoredPosition: {x: -358, y: 89}
   m_SizeDelta: {x: 400, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481214384
@@ -7070,7 +7081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Recipe 1
+  m_text: Grilled Vegetable wrap
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -8650,7 +8661,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565622680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.69108224, y: 0.69108224, z: 0.69108224}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8658,7 +8669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72, y: -541}
+  m_AnchoredPosition: {x: -83, y: -541}
   m_SizeDelta: {x: 800, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565622682
@@ -8681,10 +8692,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups.
+  m_text: Take up your trusty scythe and with careful hands, sow the seeds of your
+    botanical vision, each one a promise of vibrant life. Shower your fledgling garden
+    with the nurturing touch of water, and marvel as it transforms before your eyes
+    into a symphony of color and vitality, a testament to your green-thumb mastery!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db5e570e3e6bcb24099cadc9949f234e, type: 2}
   m_sharedMaterial: {fileID: 6468878349348863595, guid: db5e570e3e6bcb24099cadc9949f234e,
@@ -11621,13 +11632,56 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly
-    used in the graphic, print, and publishing industries for previewing layouts
-    and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic,
-    print, and publishing industries for previewing layouts and visual mockups.
+  m_text: 'Ingredients:
+
+    1 bell pepper, thinly sliced
+
+    1 carrot, thinly sliced
+
+    1/4
+    cup red onion, thinly sliced
+
+    1 cup lettuce leaves
+
+    2 whole grain wraps
+    or tortillas
+
+    2 tablespoon hummus or greek yogurt
+
+    2 tablespoons balsamic
+    glaze (optional)
+
+    salt and pepper to taste
+
+
+    1. Preheat a grill pan or
+    grill over medium heat.
+
+    2. Season bell pepper slices, carrot slices, and
+    red onion slices with salt and pepper.
+
+    3. Grill the vegetables for 4-5 minutes
+    on each side, or until tender and slightly charred.
+
+    4. Spread hummus or
+    Greek yogurt on each wrap or tortilla.
+
+    5. Place lettuce leaves on top of
+    the spread.
+
+    6. Arrange grilled vegetables on top of the lettuce.
+
+    7.
+    Drizzle with balsamic glaze, if desired.
+
+    8. Roll up the wraps or tortillas,
+    tucking in the sides as you go.
+
+    9. Slice the wraps in half diagonally and
+    serve immediately. Enjoy your delicious grilled vegetable wraps!
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -11655,8 +11709,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 22.4
+  m_fontSizeBase: 22.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11799,7 +11853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample3
+  m_text: Watering
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -12156,7 +12210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &831044646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14896,7 +14950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7b10e4e6d34913428426f63165fc688, type: 3}
+  m_Texture: {fileID: 2800000, guid: bedab626e08eeb246b5fae568ec3ae9a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -15004,7 +15058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Harvesting
+  m_text: Croping
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -15391,7 +15445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample2
+  m_text: Planting
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -15687,13 +15741,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly
-    used in the graphic, print, and publishing industries for previewing layouts
-    and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic,
-    print, and publishing industries for previewing layouts and visual mockups.
+  m_text: '1. Prep Veggies: Tear lettuce leaves, slice red onion, grate carrot, slice
+    bell pepper, and slice tomato.
+
+    2. Make Dressing: In a small bowl, whisk
+    together olive oil, balsamic vinegar, Dijon mustard, minced garlic, salt, and
+    pepper.
+
+    3. Combine: Place all the prepared vegetables in a large bowl.
+
+    4.
+    Dress Salad: Drizzle the dressing over the vegetables.
+
+    5. Toss: Gently toss
+    the salad until all vegetables are evenly coated with the dressing.
+
+    6. Serve
+    the dish and enjoy!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -15721,8 +15785,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 32.4
+  m_fontSizeBase: 32.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20014,7 +20078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136, y: -61}
+  m_AnchoredPosition: {x: 128, y: -55}
   m_SizeDelta: {x: 750, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344384041
@@ -20037,13 +20101,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly
-    used in the graphic, print, and publishing industries for previewing layouts
-    and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic,
-    print, and publishing industries for previewing layouts and visual mockups.
+  m_text: 'Cropping in gardening involves careful consideration and execution to
+    ensure the health and aesthetics of the plants these are some steps to do so
+    properly:
+
+
+
+    1: Identify why you''re cropping: growth promotion, shape maintenance,
+    or removing dead/damaged parts.
+
+
+
+    2: Use sharp tools to make clean cuts
+    just above nodes or branch junctions.
+
+
+    3: Prune during the plant''s dormant
+    season or after flowering.
+
+
+    4: Dispose of pruned material to prevent disease
+    spread.
+
+
+    5: Monitor plant growth and adjust pruning as needed.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -20071,8 +20152,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 27.7
+  m_fontSizeBase: 27.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20888,13 +20969,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly
-    used in the graphic, print, and publishing industries for previewing layouts
-    and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic,
-    print, and publishing industries for previewing layouts and visual mockups.
+  m_text: "1) Assess soil moisture. \n\n2) Choose the right time to water. \n\n3)
+    Use appropriate watering techniques (root soaking, drip irrigation, soaker hoses).
+    \n\n4) Adjust watering amount based on plant needs. \n\n5) Observe and adjust
+    watering schedule. \n\n6) Adjust watering frequency for established plants and
+    seedlings/newly planted.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -20961,7 +21040,7 @@ MonoBehaviour:
   m_margin: {x: 74.28726, y: 0, z: 242.4201, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1428642371
@@ -21282,7 +21361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7b10e4e6d34913428426f63165fc688, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9b99073d65be84743a9c6c55ce1d7b9d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -22633,7 +22712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample4
+  m_text: Harvesting
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56388fad1c467ac48bff915a1992cf65, type: 2}
   m_sharedMaterial: {fileID: 2767209211651365071, guid: 56388fad1c467ac48bff915a1992cf65,
@@ -22925,7 +23004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7b10e4e6d34913428426f63165fc688, type: 3}
+  m_Texture: {fileID: 2800000, guid: 17756d6be145b3f4f99369abce10c200, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -25246,7 +25325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1766401272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25975,7 +26054,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849152576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000004048156}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.84092575, y: 0.84092575, z: 0.84092575}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25983,7 +26062,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140.00003, y: -87}
+  m_AnchoredPosition: {x: 133, y: -87}
   m_SizeDelta: {x: 750, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849152578
@@ -26006,13 +26085,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum is placeholder text commonly used in the graphic, print, and
-    publishing industries for previewing layouts and visual mockups. Lorem ipsum
-    is placeholder text commonly used in the graphic, print, and publishing industries
-    for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly
-    used in the graphic, print, and publishing industries for previewing layouts
-    and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic,
-    print, and publishing industries for previewing layouts and visual mockups.
+  m_text: "1) Monitor your crops regularly to determine when they are ready for harvest.\r\n\n2)
+    Harvest crops at the optimal time of day, typically in the morning when they
+    are freshest.\r\n\n3) Use appropriate tools such as shears, scissors, or a knife
+    for harvesting, depending on the type of crop.\r\n\n4) Follow specific guidelines
+    for each type of plant regarding how to harvest them \n\n5) Enjoy the fruits
+    (or vegetables) of your labor!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79d75bc29f10db14eaa56b3e2db6a81a, type: 2}
   m_sharedMaterial: {fileID: 6626439397345975897, guid: 79d75bc29f10db14eaa56b3e2db6a81a,
@@ -26079,7 +26157,7 @@ MonoBehaviour:
   m_margin: {x: 74.28726, y: 0, z: 242.4201, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1849152579
@@ -29802,7 +29880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7b10e4e6d34913428426f63165fc688, type: 3}
+  m_Texture: {fileID: 2800000, guid: 65944fb479a493740be8ec6629fbf49a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
