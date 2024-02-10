@@ -4,28 +4,36 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    [Header("Door Animation")]
-    public Animator doorAnim;     
-
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class AnimatedObject
     {
-        
+        public Animator animator;
+        public string parameterName;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<AnimatedObject> animatedObjects = new List<AnimatedObject>();
 
     private void OnTriggerEnter(Collider other)
     {
-        doorAnim.SetBool("IsOpen", true);
+        if (other.CompareTag("Player"))
+        {
+            SetAnimationStates(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        doorAnim.SetBool("IsOpen", false);
+        if (other.CompareTag("Player"))
+        {
+            SetAnimationStates(false);
+        }
+    }
+
+    private void SetAnimationStates(bool state)
+    {
+        foreach (AnimatedObject obj in animatedObjects)
+        {
+            obj.animator.SetBool(obj.parameterName, state);
+        }
     }
 }
