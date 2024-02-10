@@ -92,6 +92,8 @@ public class UiManager : MonoBehaviour
     public GameObject quitBtn;
     public GameObject quitContents;
 
+    private bool isInTutorial = true;
+
     private void Awake()
     {
         // Singleton pattern to ensure only one instance exists

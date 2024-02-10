@@ -299,6 +299,18 @@ public class FirebaseManager : MonoBehaviour
                     player.chaptersCompleted = Convert.ToInt32(dictPlayer["GardenAreasUnlocked"]);
                 }
 
+                // Check if the tutorial is completed
+                if (dictPlayer.ContainsKey("TutorialCompleted"))
+                {
+                    bool tutorialCompleted = Convert.ToBoolean(dictPlayer["TutorialCompleted"]);
+                    if (tutorialCompleted)
+                    {
+                        // Tutorial completed, transition to the main menu screen
+                        UiManager.instance.MainMenuScreen();
+                        return;
+                    }
+                }
+
                 // Update UI text fields with player data
                 usernameText.text = player.playerUsername;
                 chaptersCompletedText.text = player.chaptersCompleted.ToString();
@@ -315,24 +327,6 @@ public class FirebaseManager : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError("Error fetching player data: " + ex.Message);
-        }
-    }
-
-    public async void UpdatePlayerDataInDatabase(string userId)
-    {
-        try
-        {
-            DatabaseReference playerDataRef = FirebaseDatabase.DefaultInstance
-                .GetReference("Players").Child(userId);
-
-            // Update player data fields accordingly (e.g., set tutorial completed flag)
-            await playerDataRef.Child("TutorialCompleted").SetValueAsync(true);
-
-            Debug.Log("Player data updated in Firebase Realtime Database.");
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError("Error updating player data in Firebase Realtime Database: " + ex.Message);
         }
     }
 }
