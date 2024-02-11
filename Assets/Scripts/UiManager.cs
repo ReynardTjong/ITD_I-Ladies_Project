@@ -464,6 +464,8 @@ public class UiManager : MonoBehaviour
         volumeContents.SetActive(false);
         howToPlayContents.SetActive(false);
         statusContents.SetActive(true);
+
+        UpdatePlayerStatus();
     }
 
     #endregion

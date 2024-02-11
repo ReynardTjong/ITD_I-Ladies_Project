@@ -262,4 +262,32 @@ public class CampaignChapter2Manager : MonoBehaviour
 
         SceneManager.LoadScene("MainMenu");
     }
+
+    // Method to deactivate all Chapter 2 elements except the completion canvas
+    public void DeactivateChapter2Elements()
+    {
+        chapter2QuestWalkthrough1.SetActive(false);
+        chapter2QuestWalkthrough2.SetActive(false);
+        questIntro.SetActive(false);
+        questKitchen.SetActive(false);
+        kitchenInfo.SetActive(false);
+        recipeInstruction.SetActive(false);
+        gatherInstruction.SetActive(false);
+        ingredientsInstruction.SetActive(false);
+        bowlInstruction.SetActive(false);
+        finalInstruction.SetActive(false);
+        putDownIngredients.SetActive(false);
+        foodsPlacement.SetActive(false);
+        cuttingPlacement.SetActive(false);
+        tomatoPlacement.SetActive(false);
+        carrotPlacement.SetActive(false);
+        onionPlacement.SetActive(false);
+        tomatoCut.SetActive(false);
+        carrotCut.SetActive(false);
+        onionCut.SetActive(false);
+        slicedTomato.SetActive(false);
+        pileOfDicedCarrots.SetActive(false);
+        slicedOnions.SetActive(false);
+        finalCheckpoint.SetActive(false);
+    }
 }
