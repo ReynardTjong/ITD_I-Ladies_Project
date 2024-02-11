@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 9088312027022241506}
   - component: {fileID: 5758947401361375171}
   - component: {fileID: 5030518669277478262}
-  - component: {fileID: 4511259155704526331}
+  - component: {fileID: 4447679566496236301}
   m_Layer: 0
   m_Name: Spade
   m_TagString: Untagged
@@ -140,8 +140,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4511259155704526331
-MeshCollider:
+--- !u!65 &4447679566496236301
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -158,10 +158,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2237554903892826784, guid: 135cfeda53bac4bac9030ecde92bd693, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.093811035, y: 0.029916687, z: 0.17646179}
+  m_Center: {x: -0.0000019073486, y: -0.014446267, z: 0.019010432}
 --- !u!1 &9084906472936299431
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +183,7 @@ GameObject:
   - component: {fileID: 6441578437430209576}
   m_Layer: 0
   m_Name: HandTrowel
-  m_TagString: Untagged
+  m_TagString: Trowel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
