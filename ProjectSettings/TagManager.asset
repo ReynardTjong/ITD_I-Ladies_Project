@@ -28,6 +28,9 @@ TagManager:
   - Tomato
   - Pan
   - Blender
+  - SlicedTomato
+  - SlicedCarrot
+  - SlicedOnion
   layers:
   - Default
   - TransparentFX
