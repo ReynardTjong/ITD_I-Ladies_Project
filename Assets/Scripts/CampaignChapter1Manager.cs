@@ -6,7 +6,7 @@ using UnityEngine.XR;
 
 public class CampaignChapter1Manager : MonoBehaviour
 {
-    public static CampaignChapter1Manager Instance { get; private set; }
+    public static CampaignChapter1Manager instance;
 
     [Header("Chapter 1 Quest Dialogues")]
     [SerializeField] private GameObject chapter1QuestWalkthrough1;
@@ -36,8 +36,6 @@ public class CampaignChapter1Manager : MonoBehaviour
 
     [Header("Chapter 1 Completion Canvas")]
     [SerializeField] private GameObject chapter1CompletionCanvas;
-
-    private bool finalAreaOccupied = false;
 
     public void ShowQuestGarden()
     {
@@ -146,6 +144,11 @@ public class CampaignChapter1Manager : MonoBehaviour
         middleToFinalStage.SetActive(true);
     }
 
+    public void Chapter1UICompletion(GameObject chapter1UI)
+    {
+        chapter1CompletionCanvas = chapter1UI;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -176,34 +179,17 @@ public class CampaignChapter1Manager : MonoBehaviour
 
         if (other.CompareTag("Bell Pepper"))
         {
-            CompleteChapter1(transform.GetSiblingIndex() + 1, true);
+           StartCoroutine(SpawnGoodJobUI());
         }
     }
 
-    public bool FinalAreaOccupied()
-    {
-        return finalAreaOccupied;
-    }
-
-    public void CompleteChapter1(int areaNumber, bool occupied)
-    {
-        if (areaNumber == 1)
-        {
-            finalAreaOccupied = occupied;
-        }
-
-        if (FinalAreaOccupied())
-        {
-            SpawnGoodJobUI();
-        }
-    }
-
-    private void SpawnGoodJobUI()
+    public IEnumerator SpawnGoodJobUI()
     {
         if (chapter1CompletionCanvas != null)
         {
+            yield return new WaitForSeconds(3f);
             chapter1CompletionCanvas.SetActive(true);
-            StartCoroutine(CompleteFirstTaskCoroutine());
+            StartCoroutine(CompleteFirstChapterCoroutine());
         }
         else
         {
@@ -211,7 +197,7 @@ public class CampaignChapter1Manager : MonoBehaviour
         }
     }
 
-     private IEnumerator CompleteFirstTaskCoroutine()
+     private IEnumerator CompleteFirstChapterCoroutine()
      {
          yield return new WaitForSeconds(3f);
 

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CampaignFinalTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Chapter 1 Completion Canvas")]
+    [SerializeField] private GameObject chapter1CompletionCanvas;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Bell Pepper"))
+        {
+            chapter1CompletionCanvas.SetActive(true);
+            CampaignChapter1Manager.instance.SpawnGoodJobUI();
+        }
     }
 }
