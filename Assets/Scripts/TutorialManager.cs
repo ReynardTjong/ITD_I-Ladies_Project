@@ -26,13 +26,17 @@ public class TutorialManager : MonoBehaviour
 
     private Animation anim;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
     void Start()
     {
         // Get the Animation component attached to the GameObject
         anim = GetComponent<Animation>();
     }
-
+    /// <summary>
+    /// Show the walking tutorial.
+    /// </summary>
     public void ShowWalkTut()
     {
         questIntro.SetActive(false);
@@ -54,7 +58,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the looking tutorial.
+    /// </summary>
     public void ShowLookTut()
     {
         questIntro.SetActive(false);
@@ -76,7 +82,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the menu part 1.
+    /// </summary>
     public void ShowMenuRayPart1()
     {
         questIntro.SetActive(false);
@@ -98,7 +106,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the menu part 2.
+    /// </summary>
     public void ShowMenuRayPart2()
     {
         questIntro.SetActive(false);
@@ -120,7 +130,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the menu part 3.
+    /// </summary>
     public void ShowMenuRayPart3()
     {
         questIntro.SetActive(false);
@@ -142,7 +154,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the menu part 4.
+    /// </summary>
     public void ShowMenuRayPart4()
     {
         questIntro.SetActive(false);
@@ -164,7 +178,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the ray object part 1.
+    /// </summary>
     public void ShowRayObjPart1()
     {
         questIntro.SetActive(false);
@@ -186,7 +202,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the ray object part 2.
+    /// </summary>
     public void ShowRayObjPart2()
     {
         questIntro.SetActive(false);
@@ -208,7 +226,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the grab object tutorial.
+    /// </summary>
     public void ShowGrabObjTut()
     {
         questIntro.SetActive(false);
@@ -230,7 +250,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the snap object part 1.
+    /// </summary>
     public void ShowSnapObjPart1()
     {
         questIntro.SetActive(false);
@@ -258,7 +280,9 @@ public class TutorialManager : MonoBehaviour
             anim.Play("ArrowGuidance");
         }
     }
-
+    /// <summary>
+    /// Show the snap object part 2.
+    /// </summary>
     public void ShowSnapObjPart2()
     {
         questIntro.SetActive(false);
@@ -280,7 +304,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the distance grab tutorial.
+    /// </summary>
     public void ShowDistanceGrabObjTut()
     {
         questIntro.SetActive(false);
@@ -302,7 +328,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the final part 1.
+    /// </summary>
     public void ShowFinalPart1()
     {
         questIntro.SetActive(false);
@@ -324,7 +352,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the final part 2.
+    /// </summary>
     public void ShowFinalPart2()
     {
         questIntro.SetActive(false);
@@ -346,7 +376,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the final part 3.
+    /// </summary>
     public void ShowFinalPart3()
     {
         questIntro.SetActive(false);
@@ -368,7 +400,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(false);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the final part 4.
+    /// </summary>
     public void ShowFinalPart4()
     {
         questIntro.SetActive(false);
@@ -390,7 +424,9 @@ public class TutorialManager : MonoBehaviour
         questFinalPt4.SetActive(true);
         questEnd.SetActive(false);
     }
-
+    /// <summary>
+    /// Show the end tutorial.
+    /// </summary>
     public void ShowEndTut()
     {
         questIntro.SetActive(false);

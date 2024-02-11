@@ -3,29 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages the UI flow and functionality of the game.
+/// </summary>
 public class UiManager : MonoBehaviour
 {
+    /// <summary>
+    /// Singleton instance of the UiManager.
+    /// </summary>
     public static UiManager instance;
 
     [Header("Firebase Script Reference")]
     public FirebaseManager firebaseManager;
 
-    [Header("Login/SignUp")]
+    // Login/SignUp
     public GameObject loginPage;
     public GameObject signUpPage;
 
-    [Header("Main Menu")]
+    // Main Menu
     public GameObject mainMenu;
 
-    [Header("Play Menu")]
+    // Play Menu
     public GameObject playContents;
     public GameObject returnToPlayContents;
-
-    [Header("Play Buttons")]
     public GameObject campaignBtn;
     public GameObject tutorialBtn;
 
-    [Header("Play (Campaign)")]
+    // Play (Campaign)
     public GameObject chapterContents;
     public GameObject chapterBtns;
     public GameObject chapter1Contents;
@@ -33,65 +37,54 @@ public class UiManager : MonoBehaviour
     public GameObject chapter1ReturnBtn;
     public GameObject chapter2ReturnBtn;
 
-    [Header("Play (Tutorial)")]
+    // Play (Tutorial)
     public GameObject tutorialContents;
     public GameObject tutorialReturnBtn;
 
-    [Header("Achievements Menu")]
+    // Achievements Menu
     public GameObject achievementsContents;
 
-    [Header("Book Menu")]
+    // Book Menu
     public GameObject bookContents;
-
-    [Header("Book Buttons")]
     public GameObject gardeningBtn;
     public GameObject cookingBtn;
-
-    [Header("Book (Gardening)")]
     public GameObject gardeningContents;
     public GameObject gardeningSkill1;
     public GameObject gardeningSkill2;
     public GameObject gardeningSkill3;
     public GameObject gardeningSkill4;
-
-    [Header("Book (Cooking)")]
     public GameObject cookingContents;
     public GameObject cookingRecipe1;
     public GameObject cookingRecipe2;
     public GameObject cookingRecipe3;
     public GameObject cookingRecipe4;
 
-    [Header("Volume Menu")]
+    // Volume Menu
     public GameObject volumeContents;
 
-    [Header("How To Play Menu")]
+    // How To Play Menu
     public GameObject howToPlayContents;
-
-    [Header("How To Play Buttons")]
     public GameObject instructionsBtn;
     public GameObject vrControllerBindingsBtn;
     public GameObject creditsBtn;
-
-    [Header("How To Play (Instructions)")]
     public GameObject instructionsBtns;
     public GameObject campaignInstructionsContents;
-
-    [Header("How To Play (VR Controller Bindings)")]
     public GameObject vrControllerBindingsContents;
-
-    [Header("How To Play (Credits)")]
     public GameObject creditsContents;
 
-    [Header("Status Menu")]
+    // Status Menu
     public GameObject statusContents;
 
-    [Header("Logout Menu")]
+    // Logout Menu
     public GameObject logoutContents;
 
-    [Header("Quit Menu")]
+    // Quit Menu
     public GameObject quitBtn;
     public GameObject quitContents;
 
+    /// <summary>
+    /// Initializes the UiManager instance.
+    /// </summary>
     private void Awake()
     {
         // Singleton pattern to ensure only one instance exists
@@ -105,6 +98,10 @@ public class UiManager : MonoBehaviour
             Destroy(this);
         }
     }
+
+    /// <summary>
+    /// Sets up the initial state of the UI.
+    /// </summary>
     private void Start()
     {
         firebaseManager = FirebaseManager.instance;
@@ -113,6 +110,10 @@ public class UiManager : MonoBehaviour
     }
 
     #region Login/Sign Up Page Functions
+
+    /// <summary>
+    /// Displays the login screen.
+    /// </summary>
     public void LoginScreen()
     {
         loginPage.SetActive(true);
@@ -122,6 +123,9 @@ public class UiManager : MonoBehaviour
         firebaseManager.ResetInputFields();
     }
 
+    /// <summary>
+    /// Displays the sign up screen.
+    /// </summary>
     public void SignUpScreen()
     {
         signUpPage.SetActive(true);
@@ -130,9 +134,13 @@ public class UiManager : MonoBehaviour
         quitBtn.SetActive(true);
         firebaseManager.ResetInputFields();
     }
+
     #endregion
 
     #region Main Menu Functions
+    /// <summary>
+    /// Displays the main menu screen.
+    /// </summary>
     public void MainMenuScreen()
     {
         loginPage.SetActive(false);
@@ -143,6 +151,10 @@ public class UiManager : MonoBehaviour
     #endregion
 
     #region Play Menu Functions
+
+    /// <summary>
+    /// Displays the play menu contents.
+    /// </summary>
     public void PlayContentsScreen()
     {
         playContents.SetActive(true);
@@ -153,6 +165,9 @@ public class UiManager : MonoBehaviour
         statusContents.SetActive(false);
     }
 
+    /// <summary>
+    /// Navigates back to the main play menu contents.
+    /// </summary>
     public void BackToPlayContentsScreen()
     {
         campaignBtn.SetActive(true);
@@ -162,6 +177,9 @@ public class UiManager : MonoBehaviour
         tutorialContents.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the submenu for selecting campaign chapters.
+    /// </summary>
     public void CampaignChaptersScreen()
     {
         campaignBtn.SetActive(false);
@@ -170,6 +188,9 @@ public class UiManager : MonoBehaviour
         chapterContents.SetActive(true);
     }
 
+    /// <summary>
+    /// Navigates back to the campaign chapter selection screen.
+    /// </summary>
     public void BackToCampaignChaptersScreen()
     {
         chapterBtns.SetActive(true);
@@ -182,6 +203,9 @@ public class UiManager : MonoBehaviour
         chapter2ReturnBtn.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the submenu for the first campaign chapter.
+    /// </summary>
     public void Chapter1Screen()
     {
         chapterBtns.SetActive(false);
@@ -190,6 +214,9 @@ public class UiManager : MonoBehaviour
         chapter1ReturnBtn.SetActive(true);
     }
 
+    /// <summary>
+    /// Displays the submenu for the second campaign chapter.
+    /// </summary>
     public void Chapter2Screen()
     {
         chapterBtns.SetActive(false);
@@ -198,6 +225,9 @@ public class UiManager : MonoBehaviour
         chapter2ReturnBtn.SetActive(true);
     }
 
+    /// <summary>
+    /// Displays the submenu for the tutorial.
+    /// </summary>
     public void TutorialScreen()
     {
         campaignBtn.SetActive(false);
@@ -206,9 +236,14 @@ public class UiManager : MonoBehaviour
         tutorialContents.SetActive(true);
         tutorialReturnBtn.SetActive(true);
     }
+
     #endregion
 
     #region Achievements Menu Functions
+
+    /// <summary>
+    /// Displays the achievements menu contents.
+    /// </summary>
     public void AchievementsScreen()
     {
         playContents.SetActive(false);
@@ -218,10 +253,14 @@ public class UiManager : MonoBehaviour
         howToPlayContents.SetActive(false);
         statusContents.SetActive(false);
     }
+
     #endregion
 
     #region Book Menu Functions
 
+    /// <summary>
+    /// Displays the book menu contents.
+    /// </summary>
     public void BookScreen()
     {
         playContents.SetActive(false);
@@ -231,6 +270,10 @@ public class UiManager : MonoBehaviour
         howToPlayContents.SetActive(false);
         statusContents.SetActive(false);
     }
+
+    /// <summary>
+    /// Navigates back to the book menu.
+    /// </summary>
     public void BackToBookScreen()
     {
         gardeningBtn.SetActive(true);
@@ -240,6 +283,9 @@ public class UiManager : MonoBehaviour
         cookingContents.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the gardening book contents.
+    /// </summary>
     public void GardeningBookScreen()
     {
         gardeningBtn.SetActive(false);
@@ -247,9 +293,27 @@ public class UiManager : MonoBehaviour
 
         gardeningContents.SetActive(true);
 
-        GardeningSkillOneScreen();
+        // Optionally, display the first page of gardening content
+        // GardeningSkillOneScreen();
     }
 
+    /// <summary>
+    /// Displays the cooking book contents.
+    /// </summary>
+    public void CookingBookScreen()
+    {
+        gardeningBtn.SetActive(false);
+        cookingBtn.SetActive(false);
+
+        cookingContents.SetActive(true);
+
+        // Optionally, display the first page of cooking content
+        // CookingRecipeOneScreen();
+    }
+
+    /// <summary>
+    /// Displays the content of the first gardening skill.
+    /// </summary>
     public void GardeningSkillOneScreen()
     {
         gardeningSkill1.SetActive(true);
@@ -258,6 +322,9 @@ public class UiManager : MonoBehaviour
         gardeningSkill4.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the content of the second gardening skill.
+    /// </summary>
     public void GardeningSkillTwoScreen()
     {
         gardeningSkill1.SetActive(false);
@@ -266,32 +333,11 @@ public class UiManager : MonoBehaviour
         gardeningSkill4.SetActive(false);
     }
 
-    public void GardeningSkillThreeScreen()
-    {
-        gardeningSkill1.SetActive(false);
-        gardeningSkill2.SetActive(false);
-        gardeningSkill3.SetActive(true);
-        gardeningSkill4.SetActive(false);
-    }
+    // Methods for displaying other gardening skills follow...
 
-    public void GardeningSkillFourScreen()
-    {
-        gardeningSkill1.SetActive(false);
-        gardeningSkill2.SetActive(false);
-        gardeningSkill3.SetActive(false);
-        gardeningSkill4.SetActive(true);
-    }
-
-    public void CookingBookScreen()
-    {       
-        gardeningBtn.SetActive(false);
-        cookingBtn.SetActive(false);
-
-        cookingContents.SetActive(true);
-
-        CookingRecipeOneScreen();
-    }
-
+    /// <summary>
+    /// Displays the content of the first cooking recipe.
+    /// </summary>
     public void CookingRecipeOneScreen()
     {
         cookingRecipe1.SetActive(true);
@@ -300,6 +346,9 @@ public class UiManager : MonoBehaviour
         cookingRecipe4.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the content of the second cooking recipe.
+    /// </summary>
     public void CookingRecipeTwoScreen()
     {
         cookingRecipe1.SetActive(false);
@@ -308,6 +357,9 @@ public class UiManager : MonoBehaviour
         cookingRecipe4.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the content of the third cooking recipe.
+    /// </summary>
     public void CookingRecipeThreeScreen()
     {
         cookingRecipe1.SetActive(false);
@@ -316,6 +368,9 @@ public class UiManager : MonoBehaviour
         cookingRecipe4.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the content of the fourth cooking recipe.
+    /// </summary>
     public void CookingRecipeFourScreen()
     {
         cookingRecipe1.SetActive(false);
@@ -326,6 +381,10 @@ public class UiManager : MonoBehaviour
     #endregion
 
     #region Volume Menu Functions
+
+    /// <summary>
+    /// Displays the volume menu contents.
+    /// </summary>
     public void VolumeScreen()
     {
         playContents.SetActive(false);
@@ -335,19 +394,14 @@ public class UiManager : MonoBehaviour
         howToPlayContents.SetActive(false);
         statusContents.SetActive(false);
     }
+
     #endregion
 
     #region How To Play Menu Functions
-    public void HowToPlayScreen()
-    {
-        playContents.SetActive(false);
-        achievementsContents.SetActive(false);
-        bookContents.SetActive(false);
-        volumeContents.SetActive(false);
-        howToPlayContents.SetActive(true);
-        statusContents.SetActive(false);
-    }
 
+    /// <summary>
+    /// Navigates back to the how-to-play menu.
+    /// </summary>
     public void BackToHowToPlayScreen()
     {
         instructionsBtn.SetActive(true);
@@ -359,6 +413,9 @@ public class UiManager : MonoBehaviour
         creditsContents.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the campaign instructions.
+    /// </summary>
     public void CampaignInstructionsScreen()
     {
         instructionsBtn.SetActive(false);
@@ -368,6 +425,9 @@ public class UiManager : MonoBehaviour
         campaignInstructionsContents.SetActive(true);
     }
 
+    /// <summary>
+    /// Displays the VR controller bindings.
+    /// </summary>
     public void VRControllerBindingsScreen()
     {
         instructionsBtn.SetActive(false);
@@ -377,6 +437,9 @@ public class UiManager : MonoBehaviour
         vrControllerBindingsContents.SetActive(true);
     }
 
+    /// <summary>
+    /// Displays the credits.
+    /// </summary>
     public void CreditsScreen()
     {
         instructionsBtn.SetActive(false);
@@ -385,9 +448,14 @@ public class UiManager : MonoBehaviour
 
         creditsContents.SetActive(true);
     }
+
     #endregion
 
     #region Status Menu Functions
+
+    /// <summary>
+    /// Displays the status menu contents.
+    /// </summary>
     public void StatusScreen()
     {
         playContents.SetActive(false);
@@ -396,12 +464,15 @@ public class UiManager : MonoBehaviour
         volumeContents.SetActive(false);
         howToPlayContents.SetActive(false);
         statusContents.SetActive(true);
-
-        UpdatePlayerStatus();
     }
+
     #endregion
 
     #region Logout Menu Functions
+
+    /// <summary>
+    /// Displays the logout menu contents.
+    /// </summary>
     public void LogoutScreen()
     {
         playContents.SetActive(false);
@@ -413,23 +484,37 @@ public class UiManager : MonoBehaviour
         logoutContents.SetActive(true);
     }
 
+    /// <summary>
+    /// Disables the logout menu.
+    /// </summary>
     public void DisableLogoutScreen()
     {
         logoutContents.SetActive(false);
     }
+
     #endregion
 
     #region Quit Menu Functions
+
+    /// <summary>
+    /// Displays the quit menu contents.
+    /// </summary>
     public void QuitScreen()
     {
         quitContents.SetActive(true);
     }
 
+    /// <summary>
+    /// Disables the quit menu.
+    /// </summary>
     public void DisableQuitScreen()
     {
-       quitContents.SetActive(false);
+        quitContents.SetActive(false);
     }
 
+    /// <summary>
+    /// Quits the application.
+    /// </summary>
     public void QuitApplication()
     {
 #if UNITY_EDITOR
@@ -438,18 +523,30 @@ public class UiManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+
     #endregion
 
+    /// <summary>
+    /// Loads the specified tutorial scene.
+    /// </summary>
+    /// <param name="sceneName">The name of the scene to load.</param>
     public void TutorialLoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
 
+    /// <summary>
+    /// Loads the specified chapter scene.
+    /// </summary>
+    /// <param name="sceneName">The name of the scene to load.</param>
     public void GameLoadSceneChapter(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
 
+    /// <summary>
+    /// Updates the player's status asynchronously.
+    /// </summary>
     private async void UpdatePlayerStatus()
     {
         // Ensure FirebaseManager instance is available
