@@ -6,182 +6,248 @@ using UnityEngine.SceneManagement;
 public class CampaignChapter2Manager : MonoBehaviour
 {
     public static CampaignChapter2Manager instance;
-    [Header("Chapter 1 Quest Dialogues")]
-    [SerializeField] private GameObject chapter1QuestWalkthrough1;
-    [SerializeField] private GameObject chapter1QuestWalkthrough2;
-    [SerializeField] private GameObject chapter1QuestWalkthrough3;
 
-    [Header("Chapter 1 QuestWalkthrough1")]
+    [Header("Chapter 2 Quest Dialogues")]
+    [SerializeField] private GameObject chapter2QuestWalkthrough1;
+    [SerializeField] private GameObject chapter2QuestWalkthrough2;
+
+    [Header("Chapter 2 QuestWalkthrough1")]
     [SerializeField] private GameObject questIntro;
-    [SerializeField] private GameObject questGarden;
+    [SerializeField] private GameObject questKitchen;
 
-    [Header("Chapter 1 Trigger Checkpoints")]
-    [SerializeField] private GameObject checkpointOne;
-    [SerializeField] private GameObject checkpointTwo;
-    [SerializeField] private GameObject checkpointThree;
-    [SerializeField] private GameObject checkpointFour;
-    [SerializeField] private GameObject checkpointFinal;
+    [Header("Chapter 2 QuestWalkthrough2")]
+    [SerializeField] private GameObject kitchenInfo;
+    [SerializeField] private GameObject recipeInstruction;
+    [SerializeField] private GameObject gatherInstruction;
+    [SerializeField] private GameObject ingredientsInstruction;
+    [SerializeField] private GameObject bowlInstruction;
+    [SerializeField] private GameObject finalInstruction;
 
-    [Header("Chapter 1 Texts Checkpoints")]
-    [SerializeField] private GameObject scytheCheckpoint;
-    [SerializeField] private GameObject trowelCheckpoint;
-    [SerializeField] private GameObject wateringCheckpoint;
+    [Header("Chapter 2 Main Trigger Checkpoints")]
+    [SerializeField] private GameObject putDownIngredients;
+    [SerializeField] private GameObject foodsPlacement;
+    [SerializeField] private GameObject cuttingPlacement;
     [SerializeField] private GameObject finalCheckpoint;
 
-    [Header("Chapter 1 Growth Stages")]
-    [SerializeField] private GameObject growthSprouts;
-    [SerializeField] private GameObject middleToFinalStage;
+    [Header("Chapter 2 Ingredients Trigger")]
+    [SerializeField] private GameObject bellPepper;
+    [SerializeField] private GameObject carrotSliced;
+    [SerializeField] private GameObject onionSliced;
+    [SerializeField] private GameObject tomatoSliced;
+    [SerializeField] private GameObject lettuce;
+    [SerializeField] private GameObject salt;
+    [SerializeField] private GameObject pepper;
+    [SerializeField] private GameObject sugar;
 
-    [Header("Chapter 1 Completion Canvas")]
-    [SerializeField] private GameObject chapter1CompletionCanvas;
+    [Header("Chapter 2 Foods Placement Trigger")]
+    [SerializeField] private GameObject tomatoPlacement;
+    [SerializeField] private GameObject carrotPlacement;
+    [SerializeField] private GameObject onionPlacement;
 
-    public void ShowQuestGarden()
+    [Header("Chapter 2 Cutting Placement Trigger")]
+    [SerializeField] private GameObject tomatoCut;
+    [SerializeField] private GameObject carrotCut;
+    [SerializeField] private GameObject onionCut;
+
+    [Header("Chapter 2 Food Slices")]
+    [SerializeField] private GameObject slicedTomato;
+    [SerializeField] private GameObject pileOfDicedCarrots;
+    [SerializeField] private GameObject slicedOnions;
+
+    private int ingredientCount = 0; // Counter for ingredients
+
+    [Header("Chapter 2 Completion Canvas")]
+    [SerializeField] private GameObject chapter2CompletionCanvas;
+
+    public void ShowQuestKitchen()
     {
         questIntro.SetActive(false);
-        questGarden.SetActive(true);
+        questKitchen.SetActive(true);
     }
 
     public void ShowQuestWalkthrough2()
     {
         questIntro.SetActive(false);
-        questGarden.SetActive(false);
+        questKitchen.SetActive(false);
 
-        chapter1QuestWalkthrough1.SetActive(false);
-        chapter1QuestWalkthrough2.SetActive(true);
-
-        ShowCheckpointOneTrigger();
+        chapter2QuestWalkthrough1.SetActive(false);
+        chapter2QuestWalkthrough2.SetActive(true);
     }
 
-    public void ShowQuestWalkthrough3()
+    public void ShowRecipeInstruction()
     {
-        questIntro.SetActive(false);
-        questGarden.SetActive(false);
-
-        chapter1QuestWalkthrough2.SetActive(false);
-        chapter1QuestWalkthrough3.SetActive(true);
+        kitchenInfo.SetActive(false);
+        recipeInstruction.SetActive(true);
+        gatherInstruction.SetActive(false);
+        ingredientsInstruction.SetActive(false);
+        bowlInstruction.SetActive(false);
+        finalInstruction.SetActive(false);  
     }
 
-    public void ShowCheckpointOneTrigger()
+    public void ShowGatherInstruction()
     {
-        checkpointOne.SetActive(true);
-        checkpointTwo.SetActive(false);
-        checkpointThree.SetActive(false);
-        checkpointFour.SetActive(false);
-        checkpointFinal.SetActive(false);
+        kitchenInfo.SetActive(false);
+        recipeInstruction.SetActive(false);
+        gatherInstruction.SetActive(true);
+        ingredientsInstruction.SetActive(false);
+        bowlInstruction.SetActive(false);
+        finalInstruction.SetActive(false);
     }
 
-    public void ShowCheckpointTwoTrigger()
+    public void ShowIngredientsInstruction()
     {
-        checkpointOne.SetActive(false);
-        checkpointTwo.SetActive(true);
-        checkpointThree.SetActive(false);
-        checkpointFour.SetActive(false);
-        checkpointFinal.SetActive(false);
+        kitchenInfo.SetActive(false);
+        recipeInstruction.SetActive(false);
+        gatherInstruction.SetActive(false);
+        ingredientsInstruction.SetActive(true);
+        bowlInstruction.SetActive(false);
+        finalInstruction.SetActive(false);
     }
 
-    public void ShowCheckpointThreeTrigger()
+    public void ShowBowlInstruction()
     {
-        checkpointOne.SetActive(false);
-        checkpointTwo.SetActive(true);
-        checkpointThree.SetActive(true);
-        checkpointFour.SetActive(false);
-        checkpointFinal.SetActive(false);
+        kitchenInfo.SetActive(false);
+        recipeInstruction.SetActive(false);
+        gatherInstruction.SetActive(false);
+        ingredientsInstruction.SetActive(false);
+        bowlInstruction.SetActive(true);
+        finalInstruction.SetActive(false);
     }
 
-    public void ShowCheckpointFourTrigger()
+    public void ShowFinalInstruction()
     {
-        checkpointOne.SetActive(false);
-        checkpointTwo.SetActive(false);
-        checkpointThree.SetActive(false);
-        checkpointFour.SetActive(true);
-        checkpointFinal.SetActive(false);
+        kitchenInfo.SetActive(false);
+        recipeInstruction.SetActive(false);
+        gatherInstruction.SetActive(false);
+        ingredientsInstruction.SetActive(false);
+        bowlInstruction.SetActive(false);
+        finalInstruction.SetActive(true);
     }
 
-    public void ShowCheckpointFinalTrigger()
+    public void ShowPutDownIngredients()
     {
-        checkpointOne.SetActive(false);
-        checkpointTwo.SetActive(true);
-        checkpointThree.SetActive(false);
-        checkpointFour.SetActive(false);
-        checkpointFinal.SetActive(false);
-    }
-
-    public void ShowTrowelText()
-    {
-        scytheCheckpoint.SetActive(false);
-        trowelCheckpoint.SetActive(true);
-        wateringCheckpoint.SetActive(false);
+        putDownIngredients.SetActive(true);
+        cuttingPlacement.SetActive(false);
         finalCheckpoint.SetActive(false);
     }
 
-    public void ShowWateringCanText()
+    public void ShowFoodsPlacement()
     {
-        scytheCheckpoint.SetActive(false);
-        trowelCheckpoint.SetActive(false);
-        wateringCheckpoint.SetActive(true);
+        foodsPlacement.SetActive(true);
+        cuttingPlacement.SetActive(false);
         finalCheckpoint.SetActive(false);
     }
 
-    public void ShowFinalText()
+    public void ShowCuttingPlacement()
     {
-        scytheCheckpoint.SetActive(false);
-        trowelCheckpoint.SetActive(false);
-        wateringCheckpoint.SetActive(false);
+        foodsPlacement.SetActive(false);
+        cuttingPlacement.SetActive(true);
+        finalCheckpoint.SetActive(false);
+    }
+
+    public void ShowFinalCheckpoint()
+    {
+        putDownIngredients.SetActive(false);
+        foodsPlacement.SetActive(false);
+        cuttingPlacement.SetActive(false);
         finalCheckpoint.SetActive(true);
+
+        ShowFinalInstruction();
     }
 
-    public void ShowGrowthSprouts()
+    public void ShowSlicedTomato()
     {
-        growthSprouts.SetActive(true);
-        middleToFinalStage.SetActive(false);
+        slicedTomato.SetActive(true);
     }
 
-    public void ShowMiddleToFinalSprouts()
+    public void ShowPileOfDicedCarrots()
     {
-        growthSprouts.SetActive(false);
-        middleToFinalStage.SetActive(true);
+        pileOfDicedCarrots.SetActive(true);
     }
+
+    public void ShowSlicedOnions()
+    {
+        slicedOnions.SetActive(true);
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        #region Ingredients Trigger  
+        if (IsIngredient(other.tag))
         {
-            ShowCheckpointTwoTrigger();
-            ShowQuestWalkthrough3();
+            ingredientCount++; 
+            CheckIngredientsCompletion(); 
+        }
+        #endregion
+
+        #region Foods Placement Trigger
+        if (other.CompareTag("Tomato"))
+        {
+            ShowCuttingPlacement();
         }
 
-        if (other.CompareTag("Scythe"))
+        if (other.CompareTag("Carrot"))
         {
-            ShowCheckpointThreeTrigger();
-            ShowTrowelText();
+            ShowCuttingPlacement();
         }
 
-        if (other.CompareTag("Trowel"))
+        if (other.CompareTag("Onion"))
         {
-            ShowCheckpointFourTrigger();
-            ShowWateringCanText();
-            ShowGrowthSprouts();
+            ShowCuttingPlacement();
+        }
+        #endregion
+
+        if (other.CompareTag("Knife"))
+        {
+            ShowSlicedTomato();
+            ShowPileOfDicedCarrots();
+            ShowSlicedOnions();
         }
 
-        if (other.CompareTag("WateringCan"))
-        {
-            ShowCheckpointFinalTrigger();
-            ShowFinalText();
-            ShowMiddleToFinalSprouts();
-        }
-
-        if (other.CompareTag("Bell Pepper"))
+        if (other.CompareTag("GrabbableObject"))
         {
             StartCoroutine(SpawnGoodJobUI());
         }
     }
 
+    // This method is called when an object exits the trigger area
+    private void OnTriggerExit(Collider other)
+    {
+        // Check if the exiting object is one of the ingredients
+        if (IsIngredient(other.tag))
+        {
+            ingredientCount--; // Decrement the ingredient count
+        }
+    }
+
+    // Check if the object tag corresponds to an ingredient
+    private bool IsIngredient(string tag)
+    {
+        return tag == "Bell Pepper" ||
+               tag == "SlicedCarrot" ||
+               tag == "SlicedOnion" ||
+               tag == "SlicedTomato" ||
+               tag == "Lettuce" ||
+               tag == "Salt" ||
+               tag == "Pepper" ||
+               tag == "Sugar";
+    }
+
+    private void CheckIngredientsCompletion()
+    {
+        if (ingredientCount >= 8) 
+        {
+            ShowFinalCheckpoint();
+        }
+    }
+
     public IEnumerator SpawnGoodJobUI()
     {
-        if (chapter1CompletionCanvas != null)
+        if (chapter2CompletionCanvas != null)
         {
             yield return new WaitForSeconds(5f);
-            chapter1CompletionCanvas.SetActive(true);
+            chapter2CompletionCanvas.SetActive(true);
             StartCoroutine(CompleteSecondChapterCoroutine());
         }
         else

@@ -200,7 +200,7 @@ public class CampaignChapter1Manager : MonoBehaviour
      }
 
     //S Method to deactivate all Chapter 1 elements except the completion canvas
-    public void DeactivateChapter1SElements()
+    public void DeactivateChapter1Elements()
     {
         chapter1QuestWalkthrough1.SetActive(false);
         chapter1QuestWalkthrough2.SetActive(false);

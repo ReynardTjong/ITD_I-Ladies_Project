@@ -4,49 +4,49 @@ using System;
 using System.Collections.Generic;
 
 ///<summary>
-/// Manages achievements in the game.
+/// Manages achievements in the game
 ///</summary>
 public class AchievementManager : MonoBehaviour
 {
     ///<summary>
-    /// Represents individual achievements in the game.
+    /// Represents individual achievements in the game
     ///</summary>
     [System.Serializable]
     public class Achievement
     {
         ///<summary>
-        /// The name of the achievement.
+        /// The name of the achievement
         ///</summary>
         public string achievementName;
 
         ///<summary>
-        /// Indicates if the achievement is unlocked.
+        /// Indicates if the achievement is unlocked
         ///</summary>
         public bool isUnlocked;
 
         ///<summary>
-        /// The image displayed when the achievement is locked.
+        /// The image displayed when the achievement is locked
         ///</summary>
         public GameObject lockedImage;
 
         ///<summary>
-        /// The image displayed when the achievement is unlocked.
+        /// The image displayed when the achievement is unlocked
         ///</summary>
         public GameObject unlockedImage;
     }
 
     ///<summary>
-    /// List of all achievements in the game.
+    /// List of all achievements in the game
     ///</summary>
     public List<Achievement> achievements;
 
     ///<summary>
-    /// Singleton instance of the AchievementManager.
+    /// Singleton instance of the AchievementManager
     ///</summary>
     public static AchievementManager instance;
 
     ///<summary>
-    /// Called when the script instance is being loaded.
+    /// Called when the script instance is being loaded
     ///</summary>
     private void Start()
     {
@@ -54,7 +54,7 @@ public class AchievementManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Initializes all achievements.
+    /// Initializes all achievements
     ///</summary>
     void InitializeAchievements()
     {
@@ -82,9 +82,9 @@ public class AchievementManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Unlocks the specified achievement.
+    /// Unlocks the specified achievement
     ///</summary>
-    ///<param name="achievementName">The name of the achievement to unlock.</param>
+    ///<param name="achievementName">The name of the achievement to unlock</param>
     public void UnlockAchievement(string achievementName)
     {
         Achievement achievement = achievements.Find(a => a.achievementName == achievementName);

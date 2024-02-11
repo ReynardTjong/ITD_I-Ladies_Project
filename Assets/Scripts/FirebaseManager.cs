@@ -10,128 +10,128 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 ///<summary>
-/// Manages Firebase functionality in the game.
+/// Manages Firebase functionality in the game
 ///</summary>
 public class FirebaseManager : MonoBehaviour
 {
     ///<summary>
-    /// Singleton instance of the FirebaseManager.
+    /// Singleton instance of the FirebaseManager
     ///</summary>
     public static FirebaseManager instance;
 
     ///<summary>
-    /// Status of Firebase dependencies.
+    /// Status of Firebase dependencies
     ///</summary>
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
 
     ///<summary>
-    /// Firebase authentication instance.
+    /// Firebase authentication instance
     ///</summary>
     public FirebaseAuth auth;
 
     ///<summary>
-    /// Current Firebase user.
+    /// Current Firebase user
     ///</summary>
     public FirebaseUser User;
 
     ///<summary>
-    /// Reference to the Firebase database.
+    /// Reference to the Firebase database
     ///</summary>
     public DatabaseReference DBreference;
 
     ///<summary>
-    /// Reference to the player data in the Firebase database.
+    /// Reference to the player data in the Firebase database
     ///</summary>
     public DatabaseReference playerReference;
 
     ///<summary>
-    /// Input field for email during login.
+    /// Input field for email during login
     ///</summary>
     [Header("Login")]
     [SerializeField] private TMP_InputField emailLoginField;
 
     ///<summary>
-    /// Input field for password during login.
+    /// Input field for password during login
     ///</summary>
     [SerializeField] private TMP_InputField passwordLoginField;
 
     ///<summary>
-    /// Text for displaying login warnings.
+    /// Text for displaying login warnings
     ///</summary>
     [SerializeField] private TMP_Text warningLoginText;
 
     ///<summary>
-    /// Text for confirming successful login.
+    /// Text for confirming successful login
     ///</summary>
     [SerializeField] private TMP_Text confirmLoginText;
 
     ///<summary>
-    /// Input field for username during signup.
+    /// Input field for username during signup
     ///</summary>
     [Header("SignUp")]
     [SerializeField] private TMP_InputField usernameSignUpField;
 
     ///<summary>
-    /// Input field for email during signup.
+    /// Input field for email during signup
     ///</summary>
     [SerializeField] private TMP_InputField emailSignUpField;
 
     ///<summary>
-    /// Input field for password during signup.
+    /// Input field for password during signup
     ///</summary>
     [SerializeField] private TMP_InputField passwordSignUpField;
 
     ///<summary>
-    /// Input field for confirming password during signup.
+    /// Input field for confirming password during signup
     ///</summary>
     [SerializeField] private TMP_InputField passwordSignUpConfirmField;
 
     ///<summary>
-    /// Text for displaying signup warnings.
+    /// Text for displaying signup warnings
     ///</summary>
     [SerializeField] private TMP_Text warningSignUpText;
 
     ///<summary>
-    /// Text displaying player username.
+    /// Text displaying player username
     ///</summary>
     [Header("Status")]
     [SerializeField] private TMP_Text usernameText;
 
     ///<summary>
-    /// Text displaying chapters completed.
+    /// Text displaying chapters completed
     ///</summary>
     [SerializeField] private TMP_Text chaptersCompletedText;
 
     ///<summary>
-    /// Text displaying achievements achieved.
+    /// Text displaying achievements achieved
     ///</summary>
     [SerializeField] private TMP_Text achievementsAchievedText;
 
     ///<summary>
-    /// Text displaying books unlocked.
+    /// Text displaying books unlocked
     ///</summary>
     [SerializeField] private TMP_Text booksUnlockedText;
 
     ///<summary>
-    /// Text displaying garden areas unlocked.
+    /// Text displaying garden areas unlocked
     ///</summary>
     [SerializeField] private TMP_Text gardenAreasUnlockedText;
 
     ///<summary>
-    /// Called when the script instance is being loaded.
+    /// Called when the script instance is being loaded
     ///</summary>
     void Awake()
     {
         instance = this;
 
-        //Check that all of the necessary dependencies for Firebase are present on the system
+        // Check that all of the necessary dependencies for Firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
             dependencyStatus = task.Result;
             if (dependencyStatus == DependencyStatus.Available)
             {
-                //If they are available, initialize Firebase
+                // If available, initialize Firebase
                 InitializeFirebase();
             }
             else
@@ -142,7 +142,7 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Initializes Firebase components.
+    /// Initializes Firebase components
     ///</summary>
     private void InitializeFirebase()
     {
@@ -154,25 +154,25 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Handles the login process.
+    /// Handles the login process
     ///</summary>
     public async void LoginButton()
     {
-        //Call the login coroutine passing the email and password
+        // Call the login coroutine passing the email and password
         await Login(emailLoginField.text, passwordLoginField.text);
     }
 
     ///<summary>
-    /// Handles the signup process.
+    /// Handles the signup process
     ///</summary>
     public async void SignUpButton()
     {
-        //Call the register coroutine passing the email, password, and username
+        // Call the register coroutine passing the email, password, and username
         await SignUp(emailSignUpField.text, passwordSignUpField.text, usernameSignUpField.text);
     }
 
     ///<summary>
-    /// Logs out the current user.
+    /// Logs out the current user
     ///</summary>
     public void LogoutButton()
     {
@@ -182,7 +182,7 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Resets all input fields.
+    /// Resets all input fields
     ///</summary>
     public void ResetInputFields()
     {
@@ -195,7 +195,7 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Handles the login process.
+    /// Handles the login process
     ///</summary>
     private async Task Login(string email, string password)
     {
@@ -223,7 +223,7 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Handles the signup process.
+    /// Handles the signup process
     ///</summary>
     public async Task SignUp(string email, string password, string username)
     {
@@ -277,7 +277,7 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Handles login errors.
+    /// Handles login errors
     ///</summary>
     private void HandleLoginError(Exception ex)
     {
@@ -320,7 +320,7 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Handles signup errors.
+    /// Handles signup errors
     ///</summary>
     private void HandleSignUpError(Exception ex)
     {
@@ -360,7 +360,7 @@ public class FirebaseManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Updates UI with player data.
+    /// Updates UI with player data
     ///</summary>
     public async Task UpdatePlayerDataUI(string userId)
     {
