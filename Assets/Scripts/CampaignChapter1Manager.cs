@@ -144,11 +144,6 @@ public class CampaignChapter1Manager : MonoBehaviour
         middleToFinalStage.SetActive(true);
     }
 
-    public void Chapter1UICompletion(GameObject chapter1UI)
-    {
-        chapter1CompletionCanvas = chapter1UI;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -187,7 +182,7 @@ public class CampaignChapter1Manager : MonoBehaviour
     {
         if (chapter1CompletionCanvas != null)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
             chapter1CompletionCanvas.SetActive(true);
             StartCoroutine(CompleteFirstChapterCoroutine());
         }
@@ -199,7 +194,7 @@ public class CampaignChapter1Manager : MonoBehaviour
 
      private IEnumerator CompleteFirstChapterCoroutine()
      {
-         yield return new WaitForSeconds(3f);
+         yield return new WaitForSeconds(5f);
 
          SceneManager.LoadScene("MainMenu");
      }

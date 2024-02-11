@@ -13,6 +13,21 @@ TagManager:
   - WateringCan
   - Trowel
   - Bell Pepper
+  - Knife
+  - Fork
+  - Spoon
+  - Salt
+  - Pepper
+  - SoySauce
+  - Sugar
+  - Oil
+  - Plate
+  - Carrot
+  - Onion
+  - Lettuce
+  - Tomato
+  - Pan
+  - Blender
   layers:
   - Default
   - TransparentFX

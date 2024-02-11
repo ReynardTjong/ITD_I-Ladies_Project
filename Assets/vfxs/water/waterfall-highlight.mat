@@ -56,9 +56,9 @@ Material:
     - _erosion: 0.92
     - _rippleAmount: 0.36
     - _vertexOffset: 0
-    - _voronoiScale: 8.66
-    - _voronoiSpeed: 6.99
+    - _voronoiScale: 50
+    - _voronoiSpeed: 3
     m_Colors:
-    - _Color: {r: 14.698744, g: 54.693893, b: 59.01769, a: 0}
-    - _rippleSpeed: {r: 0, g: 0.1, b: 0, a: 0}
+    - _Color: {r: 0, g: 9.440419, b: 105.19517, a: 0}
+    - _rippleSpeed: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
