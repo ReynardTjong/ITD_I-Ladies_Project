@@ -13896,11 +13896,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   achievements:
   - achievementName: MasterOfBasics
-    isUnlocked: 1
+    isUnlocked: 0
     lockedImage: {fileID: 1088535549}
     unlockedImage: {fileID: 1641913419}
   - achievementName: Botanical Breakthrough
-    isUnlocked: 1
+    isUnlocked: 0
     lockedImage: {fileID: 1088535549}
     unlockedImage: {fileID: 1641913419}
   - achievementName: Cultivated Creations
@@ -13908,7 +13908,7 @@ MonoBehaviour:
     lockedImage: {fileID: 1088535549}
     unlockedImage: {fileID: 1641913419}
   - achievementName: Green Thumb Guru
-    isUnlocked: 1
+    isUnlocked: 0
     lockedImage: {fileID: 1088535549}
     unlockedImage: {fileID: 1641913419}
   - achievementName: Culinary Connoisseur
@@ -13916,7 +13916,7 @@ MonoBehaviour:
     lockedImage: {fileID: 1088535549}
     unlockedImage: {fileID: 1641913419}
   - achievementName: New Growth, New Ground
-    isUnlocked: 1
+    isUnlocked: 0
     lockedImage: {fileID: 1088535549}
     unlockedImage: {fileID: 1641913419}
   - achievementName: Bountiful Harvest

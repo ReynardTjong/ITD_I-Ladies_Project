@@ -399,6 +399,16 @@ public class UiManager : MonoBehaviour
 
     #region How To Play Menu Functions
 
+    public void HowToPlayScreen()
+    {
+        playContents.SetActive(false);
+        achievementsContents.SetActive(false);
+        bookContents.SetActive(false);
+        volumeContents.SetActive(false);
+        howToPlayContents.SetActive(true);
+        statusContents.SetActive(false);
+    }
+
     /// <summary>
     /// Navigates back to the how-to-play menu.
     /// </summary>
