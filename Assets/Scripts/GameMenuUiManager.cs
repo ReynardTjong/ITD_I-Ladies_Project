@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMenuUiManager : MonoBehaviour
 {
@@ -67,5 +68,14 @@ public class GameMenuUiManager : MonoBehaviour
         gameMenuBtns.SetActive(false);
         inventoryScreen.SetActive(false);
         quitGame.SetActive(true);
+    }
+
+    /// <summary>
+    /// Loads the specified chapter scene.
+    /// </summary>
+    /// <param name="sceneName">The name of the scene to load.</param>
+    public void GameLoadSceneChapter(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
